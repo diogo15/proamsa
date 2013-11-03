@@ -13,20 +13,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
+<script> var base = '<?php bloginfo( 'url' ); ?>'; </script>
 
 <?php wp_head(); ?>
-<script>
-	jQuery(function($){
-				
-				$.supersized({
-					slide_interval          :   3000,		
-					transition              :   1, 	
-					slides  :  	[ {image : "<?php echo IMG_DIR; ?>/bg-1.JPG", title : 'Image Credit: Maria Kazvan'} ,
-				     	          {image : "<?php echo IMG_DIR; ?>/bg-2.JPG", title : 'Image Credit: Maria Kazvan'}
-								   ]
-				});
-		    });
-</script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -35,7 +25,7 @@
     	<div class="main-header">
         	<div class="contact-logos">
             	<span class="icon"><img src="<?php echo IMG_DIR; ?>/icono-telefono.png" width="37" height="38" alt=""/>
-                	<span class="arrow-bg"><span>xxx</span></span>
+                	<span class="arrow-bg"><span>( 506 ) 0000 - 0000</span></span>
                 </span>
                 
                 <span class="icon"><img src="<?php echo IMG_DIR; ?>/icono-correo.png" width="38" height="38" alt=""/>

@@ -75,9 +75,12 @@ function proamsa_theme_scripts() {
 	wp_enqueue_style( 'oswald-googlefont', 'http://fonts.googleapis.com/css?family=Oswald:300,400' );
 	
 	wp_enqueue_script( 'jquery');
-	wp_enqueue_script( 'skip-link-focus-fix', JS_DIR . '/skip-link-focus-fix.js', array(), '1' );
-	wp_enqueue_script( 'proamsa-main-JS', JS_DIR . '/main-proamsa.js', array(), '1'  );
+	wp_enqueue_script( 'skip-link-focus-fix', JS_DIR . '/skip-link-focus-fix.js', array(), '1' );	
 	wp_enqueue_script( 'supersized-jquery-JS', JS_DIR . '/supersized.3.2.7.min.js', array(), '1' );
+	wp_enqueue_script( 'address-jquery-JS', JS_DIR . '/jquery.address-1.5.min.js', array(), '1' );
+	wp_enqueue_script( 'proamsa-main-JS', JS_DIR . '/main-proamsa.js', array(), '1'  );
+	
+	
 	
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
