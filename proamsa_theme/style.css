@@ -560,20 +560,6 @@ body{
 		min-height:100px;
 		background-color:#5288A0;
 		}
-	.footer-logos{
-		min-height:100px;
-		background-color:#6F6;
-		}
-	.footer-contact{
-		margin: 20px 0 20px 0;
-		min-height:100px;
-		background-color:#066;
-		}
-	.footer-legal{
-		margin: 0 0 50px 0;
-		min-height:100px;
-		background-color:#93C;
-		}
 
 /* =Comments
 ----------------------------------------------- */
@@ -584,4 +570,96 @@ body{
 .bypostauthor {
 }
 
+/* Estilos de footer
+----------------------------------------------- */
 
+.footer-logos{
+		min-height:100px;
+		}
+	.logo-1{
+		width: 312px;
+		height: 103px;
+		float:left;
+		background:url(img/white-70.png);
+		}
+	.logo-2{
+		width: 312px;
+		height: 103px;
+		float:left;
+		margin: 0 12px 0 12px;
+		background:url(img/white-70.png);
+		}
+	.logo-3{
+		width: 312px;
+		height: 103px;
+		float:left;
+		background:url(img/white-70.png);
+		}
+	.footer-contact{
+		margin: 20px 0 20px 0;
+		height:63px;
+		padding: 6px 38px 6px 9px;
+		background-color:#49859E;
+		}
+	.contact-logo{
+		width:89px;
+		height:62px;
+		float:left;
+		background:url(img/white-70.png);
+		}
+	.footer-contact p{
+		width:450px;
+		height:60px;
+		display:block;
+		float:left;
+		padding: 0 0 0 10px;
+		font-family:Arial, sans-serif;
+		font-size:9px;
+		color:#fff;
+		}
+	img.facebook{
+		position:relative;
+		left:75px;
+		top:16px;
+		display:block;
+		float:left;
+	}
+	.contact-us{
+		width:210px;
+		float:right;
+		}
+	.contact-us img.arrow-right{
+		float:left;
+		margin-top:20px;
+		}
+	.contact-us p{
+		width:170px;
+		height:58px;
+		float:left
+		color:#fff;
+		font-size:16px;
+		font-family: arial;
+		}
+	.contact-us p span{
+		font-size:12px;
+	}
+	.contact-us img.arrow-left{
+		float:right;
+		margin-top:20px;
+		}
+	.footer-legal{
+		margin: 0 0 50px 0;
+		min-height:100px;
+		}
+	.footer-legal p{
+		font-size:13px;
+		font-family: Arial, sans-serif;
+		color:#c6d8e4;
+		}
+	.footer-legal p.copy{
+		float:left;
+		}
+	.footer-legal p.credit{
+		margin-top: 17px;
+		float:right;
+		}
