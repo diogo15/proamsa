@@ -10,12 +10,14 @@
 
 		</div>
         </div>
-        <div class="footer-logos">
-       		<div class="logo-1"><a href="#"><img src="<?php echo IMG_DIR; ?>/footer-logo-1.png" width="312" height="103" alt=""/></a></div>
-            <div class="logo-2"><a href="#"><img src="<?php echo IMG_DIR; ?>/footer-logo-2.png" width="312" height="103" alt=""/></a></div>
-            <div class="logo-3"><a href="#"><img src="<?php echo IMG_DIR; ?>/footer-logo-3.png" width="312" height="103" alt=""/></a></div>
-            <div class="clear"></div>
-        </div>
+        
+        <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+            <div class="footer-logos">
+                <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                <div class="clear"></div>
+            </div>
+        <?php endif; ?>
+        
          <div class="footer-contact">
        			<div class="contact-logo">
                 	<img src="<?php echo IMG_DIR; ?>/footer-contact-logo.png" width="89" height="62" alt=""/>

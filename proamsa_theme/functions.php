@@ -55,12 +55,22 @@ add_action( 'after_setup_theme', 'proamsa_theme_setup' );
  * Register widgetized area and update sidebar with default widgets
  */
 function proamsa_theme_widgets_init() {
+	
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'proamsa_theme' ),
 		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Barra de Compa&ntilde;ias', 'proamsa_theme' ),
+		'id'            => 'sidebar-2',
+		'before_widget' => '<div id="%1$s" class="logo-company %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="company-title">',
 		'after_title'   => '</h1>',
 	) );
 }

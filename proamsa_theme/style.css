@@ -605,24 +605,15 @@ body{
 		min-height:100px;
 		margin-top: 25px;
 		}
-	.logo-1{
+	.logo-company {
 		width: 312px;
 		height: 103px;
-		float:left;
-		background:url(img/white-70.png);
+		float: left;
+		margin-left: 12px;
+		background: url(img/white-70.png);
 		}
-	.logo-2{
-		width: 312px;
-		height: 103px;
-		float:left;
-		margin: 0 12px 0 12px;
-		background:url(img/white-70.png);
-		}
-	.logo-3{
-		width: 312px;
-		height: 103px;
-		float:left;
-		background:url(img/white-70.png);
+	.logo-company:first-child {
+		margin-left: 0px;
 		}
 	.footer-contact{
 		margin: 20px 0 20px 0;
