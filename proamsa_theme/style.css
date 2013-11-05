@@ -581,6 +581,8 @@ body{
 		padding: 15px 15px 30px 12px;
 		min-height:154px;
 		background:url(img/white-80.png);
+		font-size: 13px;
+		color:#343A34;
 		}
 	h1{
 		margin-bottom:33px;
@@ -595,11 +597,6 @@ body{
 		font-weight:bold;
 		color:#326377;
 	}
-	p{
-		font-family: Arial, sans-serif;
-		font-size: 13px;
-		color:#343A34;
-		}
 
 /* Estilos de footer
 ----------------------------------------------- */
@@ -639,15 +636,14 @@ body{
 		float:left;
 		background:url(img/white-70.png);
 		}
-	.footer-contact p{
+	.company-info{
 		width:450px;
 		height:60px;
 		display:block;
 		float:left;
 		padding: 0 0 0 10px;
-		font-family:Arial, sans-serif;
+		color:#FFF;
 		font-size:9px;
-		color:#fff;
 		}
 	img.facebook{
 		position:relative;
@@ -656,27 +652,27 @@ body{
 		display:block;
 		float:left;
 	}
-	.contact-us{
+	.contactenos{
 		width:210px;
 		float:right;
 		}
-	.contact-us img.arrow-right{
+	.contactenos img.arrow-right{
 		float:left;
 		margin-top:20px;
 		}
-	.contact-us p{
+	.contactenos p{
 		width:170px;
 		height:58px;
-		float:left
+		float:left;
 		color:#fff;
 		font-size:16px;
 		font-family: arial;
 		}
-	.contact-us p span{
+	.contactenos p span{
 		font-size:12px;
 	}
-	.contact-us img.arrow-left{
-		float:right;
+	.contactenos img.arrow-left{
+		float:left;
 		margin-top:20px;
 		}
 	.footer-legal{
