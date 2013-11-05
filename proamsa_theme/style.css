@@ -695,7 +695,7 @@ body{
 		margin-top: 17px;
 		float:right;
 		}
-	a .dame-click{
+	a.dame-click{
 		text-decoration:none;
 		color:#FFF;
 		}
