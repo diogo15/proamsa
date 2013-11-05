@@ -527,7 +527,8 @@ body{
 	.nav ul{
 		margin:0px;
 		}
-	.nav li {
+	ul.menu > li {
+		position:relative;
 		width:14%;
 		height:70px;
 		float:left;
@@ -535,20 +536,23 @@ body{
 		font-family: 'Oswald', sans-serif;
 		background:url(img/nav-li-bg.png) no-repeat 0 center;
 		}
-	.nav li:hover{
+	ul.menu > li:hover{
 		background-color:#336377;
 		}
 	.nav li:first-child{
 		background-image:none;
 		}
 	.nav li.dos-lineas a{
-		padding-top:10px;
 		line-height: 26px;
 		}
-	.nav li.largo {
+	ul.menu > li.dos-lineas > a {
+		padding:10px;
+		}
+	ul.menu > li.largo {
 		width:16%;
 		}
-	.nav li a {
+	ul.menu > li > a {
+		height:50px;
 		display:block;
 		padding: 20px 0 0 0;
 		text-decoration:none;
@@ -556,7 +560,34 @@ body{
 		font-size:20px;
 		text-align:center;
 		}
-
+		
+/* Estilos de sub menú
+----------------------------------------------- */
+	ul#menu-principal ul.sub-menu{
+		padding-top:2px;
+		}
+	ul#menu-principal ul.sub-menu li{
+		display:none;
+		width:130px;
+		height:30px;
+		background:url(img/sub-bg.png);
+		}
+	li li{
+		margin-top:2px;
+		position:relative;
+		display:block;
+		}
+	ul#menu-principal ul.sub-menu li:hover{
+		background:url(img/sub-bg-hover.png);
+	}
+	ul#menu-principal ul.sub-menu a{
+		text-decoration:none;
+		color:#fff;
+		margin-left:5px;
+	}
+	ul#menu-principal > li:hover li{
+		display:block;
+		}
 /* =Comments
 ----------------------------------------------- */
 
