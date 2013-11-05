@@ -190,3 +190,42 @@ function sprint_boxes_add_columns( $column )
  			";
  	}	
 }
+
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * Wordpress Backend Clean
+ *
+ */
+function disable_default_dashboard_widgets() {
+
+	remove_meta_box('dashboard_right_now', 'dashboard', 'core');
+	remove_meta_box('dashboard_recent_comments', 'dashboard', 'core');
+	remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');
+	remove_meta_box('dashboard_plugins', 'dashboard', 'core');
+
+	remove_meta_box('dashboard_quick_press', 'dashboard', 'core');
+	remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');
+	remove_meta_box('dashboard_primary', 'dashboard', 'core');
+	remove_meta_box('dashboard_secondary', 'dashboard', 'core');
+
+}
+add_action('admin_menu', 'disable_default_dashboard_widgets');
+
+/* ---------------------------------------------------------------------- */
+
+function default_unregister_widgets() {
+	unregister_widget( 'WP_Widget_RSS' );
+	unregister_widget( 'WP_Widget_Meta' );
+	unregister_widget( 'WP_Widget_Pages' );	
+	unregister_widget( 'WP_Widget_Calendar' );
+	unregister_widget( 'WP_Widget_Archives' );
+	unregister_widget( 'WP_Widget_Links' );
+	unregister_widget( 'WP_Widget_Categories' );
+	unregister_widget( 'WP_Widget_Recent_Comments' );
+	unregister_widget( 'WP_Widget_Recent_Posts' );
+	unregister_widget( 'WP_Widget_Tag_Cloud' );
+}
+
+add_action( 'widgets_init', 'default_unregister_widgets' );
+
+/* ---------------------------------------------------------------------- */
