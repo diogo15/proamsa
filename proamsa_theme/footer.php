@@ -11,9 +11,9 @@
 		</div>
         </div>
         <div class="footer-logos">
-       		<div class="logo-1"><img src="<?php echo IMG_DIR; ?>/footer-logo-1.png" width="312" height="103" alt=""/></div>
-            <div class="logo-2"><img src="<?php echo IMG_DIR; ?>/footer-logo-2.png" width="312" height="103" alt=""/></div>
-            <div class="logo-3"><img src="<?php echo IMG_DIR; ?>/footer-logo-3.png" width="312" height="103" alt=""/></div>
+       		<div class="logo-1"><a href="#"><img src="<?php echo IMG_DIR; ?>/footer-logo-1.png" width="312" height="103" alt=""/></a></div>
+            <div class="logo-2"><a href="#"><img src="<?php echo IMG_DIR; ?>/footer-logo-2.png" width="312" height="103" alt=""/></a></div>
+            <div class="logo-3"><a href="#"><img src="<?php echo IMG_DIR; ?>/footer-logo-3.png" width="312" height="103" alt=""/></a></div>
             <div class="clear"></div>
         </div>
          <div class="footer-contact">

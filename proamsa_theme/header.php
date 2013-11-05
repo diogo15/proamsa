@@ -33,7 +33,7 @@
                 </span>
             </div>
             <div class="logo">
-            	<img src="<?php echo IMG_DIR; ?>/logo.png" width="252" height="176" alt=""/>
+            	<a href="#"><img src="<?php echo IMG_DIR; ?>/logo.png" width="252" height="176" alt=""/></a>
             </div>
             <div class="nav">
               	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
