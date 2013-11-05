@@ -581,6 +581,7 @@ body{
 		background:url(img/sub-bg-hover.png);
 	}
 	ul#menu-principal ul.sub-menu a{
+		display:block;
 		text-decoration:none;
 		color:#fff;
 		margin-left:5px;
