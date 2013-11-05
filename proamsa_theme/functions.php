@@ -108,3 +108,85 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * Boxes Sub-plugin Sprint Connection
+ *
+ */
+ 
+add_shortcode( 'box', 'boxes_shortcode');
+add_filter( 'manage_edit-sprint_boxes_columns', 'sprint_boxes_columns' );
+add_action( 'manage_sprint_boxes_posts_custom_column', 'sprint_boxes_add_columns' );
+
+
+register_post_type( 'sprint_boxes',
+	array(
+		'labels' => array(
+			'name' => __( 'Boxes' ),
+			'singular_name' => __( 'Box' ),
+			'add_new_item' => __( 'Add New Box' ),
+				
+		),
+		'public' => true,
+		'has_archive' => false,
+		)
+	);
+
+function get_box($id, $raw = false)
+{
+	// IF ID IS NOT NUMERIC CHECK FOR SLUG
+	if(!is_numeric($id))
+	{
+		$page = get_page_by_path( $id, null, 'sprint_boxes' );
+		$id = $page->ID;
+	}
+
+	if($raw)
+	{
+		return get_post_field('post_content', $id);
+	}
+	
+	$content = apply_filters( 'the_content', get_post_field('post_content', $id) );
+	return $content;
+}
+
+// Shortcode
+function boxes_shortcode($atts)
+{
+	$id = isset($atts['id']) ? $atts['id'] : false;
+	$raw = isset($atts['raw']) ? 1 : 0;
+	
+	if($id) { 
+		return get_box($id, $raw); 
+	} else { 
+		return false; 
+	}
+}
+
+// Columns
+function sprint_boxes_columns( $columns ) 
+{
+	return array(
+		'cb'       	=> '<input type="checkbox" />',
+		'title'    	=> 'Title',		
+		'shortcode'	=> 'Shortcode / Function',
+		'ID'    	=> 'ID',
+		'text'     	=> 'Text'
+	);
+}
+
+// Column Data
+function sprint_boxes_add_columns( $column )
+{
+	global $post;
+	$edit_link = get_edit_post_link( $post->ID );
+
+	if ( $column == 'ID' ) echo strip_tags($post->ID);
+	if ( $column == 'text' ) echo strip_tags($post->post_content);	
+ 	if(	$column == "shortcode") 
+ 	{
+ 		echo "
+ 				[box id={$post->post_name}]  &nbsp/ &nbspget_box('{$post->post_name}');
+ 			";
+ 	}	
+}
