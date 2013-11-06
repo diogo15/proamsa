@@ -536,7 +536,8 @@ body{
 		font-family: 'Oswald', sans-serif;
 		background:url(img/nav-li-bg.png) no-repeat 0 center;
 		}
-	ul.menu > li:hover{
+	ul.menu > li:hover, 
+	ul.menu > li.current-menu-item{
 		background-color:#336377;
 		}
 	.nav li:first-child{

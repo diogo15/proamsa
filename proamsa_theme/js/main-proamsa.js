@@ -10,6 +10,8 @@ jQuery(document).ready(function($){
 	
 	
 	$('.nav ul.menu a').click(function() {
+		$(".nav li").removeClass("current-menu-item");
+		$(this).parent().addClass("current-menu-item");
 		var path = $(this).attr('href').replace(base, '');
 		$.address.value(path);
 		return false;
