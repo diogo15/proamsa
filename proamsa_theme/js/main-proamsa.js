@@ -18,14 +18,14 @@ jQuery(document).ready(function($){
 	});
 	
 	
-	$.address.change(function(event) {
-		if (event.value){
-			//$ajaxSpinner.fadeIn();
-			$mainContent.empty().load(base + event.value + ' .inner', function(){
-				//$ajaxSpinner.fadeOut('fast');
-				//$mainContent.show('fast');
-			});
-		}
+//	$.address.change(function(event) {
+//		if (event.value){
+//			//$ajaxSpinner.fadeIn();
+//			$mainContent.empty().load(base + event.value + ' .inner', function(){
+//				//$ajaxSpinner.fadeOut('fast');
+//				//$mainContent.show('fast');
+//			});
+//		}
 		/*
 		var current = location.protocol + '//' + location.hostname +':'+location.port+ location.pathname;
 		if (base + '/' != current) {
@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 			location = base + '/#' + diff;
 			alert(current);
 		}*/		
-	});
+//	});
 	
 	
 	
