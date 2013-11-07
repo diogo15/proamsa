@@ -1,7 +1,7 @@
 
 jQuery(document).ready(function($){
 	
-	$mainContent = $('.main-content');
+	var $mainContent = $('.main-content');
 	
 	
 	
@@ -10,31 +10,44 @@ jQuery(document).ready(function($){
 	
 	
 	$('.nav ul.menu a').click(function() {
-		$(".nav li").removeClass("current-menu-item");
+		
+		$(this).parent().siblings().removeClass("current-menu-item");
 		$(this).parent().addClass("current-menu-item");
+		
 		var path = $(this).attr('href').replace(base, '');
 		$.address.value(path);
 		return false;
+		
+	});
+	
+	$('body').on('click','h2.entry-title a',function() {
+		
+		var path = $(this).attr('href').replace(base, '');
+		$.address.value(path);
+		return false;
+		
 	});
 	
 	
-//	$.address.change(function(event) {
-//		if (event.value){
-//			//$ajaxSpinner.fadeIn();
-//			$mainContent.empty().load(base + event.value + ' .inner', function(){
-//				//$ajaxSpinner.fadeOut('fast');
-//				//$mainContent.show('fast');
-//			});
-//		}
-		/*
+	$.address.change(function(event) {
+			
 		var current = location.protocol + '//' + location.hostname +':'+location.port+ location.pathname;
-		if (base + '/' != current) {
-			alert(current + '\n' + base + '/');
+		
+		if (event.value){
+			$mainContent.slideUp('fast', function(){
+				$mainContent.empty().load(base + event.value + ' .inner', function(){
+					$mainContent.slideDown('fast');
+				});
+			})
+		}
+					
+		if (base + '/' != current) {		
+		
 			var diff = current.replace(base, '');
 			location = base + '/#' + diff;
-			alert(current);
-		}*/		
-//	});
+		}	
+				
+	});
 	
 	
 	
@@ -47,7 +60,9 @@ jQuery(document).ready(function($){
 		slides  :  	[ {image : base + "/wp-content/themes/proamsa_theme/img/bg-1.JPG", title : 'Image Credit: Maria Kazvan'} ,
 					  {image : base + "/wp-content/themes/proamsa_theme/img/bg-2.JPG", title : 'Image Credit: Maria Kazvan'}
 					   ]
-	});		
+	});	
+	
+
 	
 		
 })

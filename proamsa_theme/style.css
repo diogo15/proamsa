@@ -608,27 +608,14 @@ body{
 		
 		}
 	.inner{
-		margin: 23px;
-		width:770px;
-		padding: 15px 15px 30px 12px;
+		margin: 20px;
+		padding: 20px 25px;
 		min-height:154px;
 		background:url(img/white-80.png);
 		font-size: 13px;
 		color:#343A34;
 		}
-	h1{
-		margin-bottom:33px;
-		font-family:'Oswald', sans-serif;
-		font-size:24px;
-		color:#658B3C;
-		}
-	h2{
-		margin-bottom:22px;
-		font-size:16px;
-		font-family:'Oswald', sans-serif;
-		font-weight:bold;
-		color:#326377;
-	}
+	
 
 /* Estilos de footer
 ----------------------------------------------- */
@@ -725,12 +712,39 @@ article{
 	margin-bottom:30px;
 	}
 article .post-img{
-	float:left;
-	margin-right:10px;
+	float: left;
+	margin-right: 3%;
+	width: 29%;
 	}
 header.entry-header{
-	float:left;
-	width:539px;
-	margin-top:10px;
-	display: block;
+	float: left;
+	width: 65%;
+	margin-top: 10px;
+	}
+.entry-meta{
+	margin-bottom:12px;
+	}
+	
+	
+/* Misc Styles
+---------------------------------------------- */	
+h1,h2,h3,h4,h5,h6 { 
+	font-family: 'Oswald', sans-serif; 
+	margin-bottom:14px;
+	font-weight:normal;
+	}
+	
+h1{
+	font-size:24px;
+	margin-bottom:20px;
+	color:#658B3C;
+	}
+h2{
+	margin-bottom:20px;
+	font-size:20px;
+	color:#326377;
+	}
+h2.entry-title{
+	font-size:23px;
+	margin-bottom:1px;
 	}
