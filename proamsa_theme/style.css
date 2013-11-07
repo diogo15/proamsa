@@ -234,7 +234,6 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
 	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
 	color: rgba(0, 0, 0, .8);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
@@ -243,13 +242,6 @@ input[type="submit"] {
 	line-height: 1;
 	padding: .6em 1em .4em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-button:hover,
-html input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa #bbb;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 button:focus,
 html input[type="button"]:focus,
@@ -709,7 +701,7 @@ body{
 ----------------------------------------------- */
 
 article{
-	margin-bottom:30px;
+	margin-bottom:50px;
 	}
 article .post-img{
 	float: left;
@@ -723,6 +715,26 @@ header.entry-header{
 	}
 .entry-meta{
 	margin-bottom:12px;
+	}
+div.entry-meta{
+	margin-top:10px;
+	}
+	
+/* button post read more
+---------------------------------------------- */	
+
+button.post-leer-mas{
+	height:25px;
+	width:90px;
+	border-radius:20px;
+	background-color:#658c3d;
+	text-align:center;
+	}
+button.post-leer-mas a{
+	color:#FFF;	
+	}
+button.post-leer-mas:hover{
+	background:#76a743;
 	}
 	
 	
@@ -747,4 +759,15 @@ h2{
 h2.entry-title{
 	font-size:23px;
 	margin-bottom:1px;
+	}
+
+/* Contact form styles
+---------------------------------------------- */
+
+form p{
+	font-size: 16px;
+	font-family: 'Oswald', sans-serif;
+	}
+form.wpcf7-form{
+	width:400px;
 	}

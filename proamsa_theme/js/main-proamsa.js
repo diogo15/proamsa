@@ -58,7 +58,11 @@ jQuery(document).ready(function($){
 		slide_interval          :   3000,		
 		transition              :   1, 	
 		slides  :  	[ {image : base + "/wp-content/themes/proamsa_theme/img/bg-1.JPG", title : 'Image Credit: Maria Kazvan'} ,
-					  {image : base + "/wp-content/themes/proamsa_theme/img/bg-2.JPG", title : 'Image Credit: Maria Kazvan'}
+					  {image : base + "/wp-content/themes/proamsa_theme/img/bg-4.JPG", title : 'Image Credit: Maria Kazvan'} ,
+					  {image : base + "/wp-content/themes/proamsa_theme/img/bg-2.JPG", title : 'Image Credit: Maria Kazvan'} ,
+					  {image : base + "/wp-content/themes/proamsa_theme/img/bg-3.JPG", title : 'Image Credit: Maria Kazvan'} 
+					   
+					  
 					   ]
 	});	
 	

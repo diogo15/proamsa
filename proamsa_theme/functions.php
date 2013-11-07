@@ -238,4 +238,13 @@ function default_unregister_widgets() {
 
 add_action( 'widgets_init', 'default_unregister_widgets' );
 
-/* ---------------------------------------------------------------------- */
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * excerpt lenght changed
+ *
+ */
+
+function new_excerpt_length($length) {
+ return 25;
+}
+add_filter('excerpt_length', 'new_excerpt_length');

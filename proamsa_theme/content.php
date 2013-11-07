@@ -8,7 +8,7 @@
 
     
 	<div class="post-img">
-        <a href="<?php echo get_post_permalink(); ?>">
+        <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
             <?php   
             
             if ( has_post_thumbnail() ) 
@@ -56,6 +56,9 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+    <button type="button" class="post-leer-mas" value="leer mas">
+    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">VER MÁS...</a>
+    </button>
 
 	<footer class="entry-meta">
 		
