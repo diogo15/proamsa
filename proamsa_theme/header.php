@@ -17,23 +17,6 @@
 
 <?php wp_head(); ?>
 
-<!-- link to the CSS files for this menu type -->
-<link rel="stylesheet" media="screen" href="css/superfish.css">
-
-<!-- link to the JavaScript files (hoverIntent is optional) -->
-<!-- if you use hoverIntent, use the updated r7 version -->
-<script src="js/hoverIntent.js"></script>
-<script src="js/superfish.js"></script>
-
-<!-- initialise Superfish -->
-<script>
-
-	jQuery(document).ready(function(){
-		jQuery('ul#menu-principal.menu').superfish();
-	});
-
-</script>
-
 </head>
 
 <body <?php body_class(); ?>>

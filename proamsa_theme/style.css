@@ -626,6 +626,9 @@ body{
 		margin-left: 12px;
 		background: url(img/white-70.png);
 		}
+	.logo-company:hover{
+		background: url(img/white-80.png);
+		}
 	.logo-company:first-child {
 		margin-left: 0px;
 		}
