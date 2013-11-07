@@ -581,6 +581,9 @@ body{
 	ul#menu-principal > li:hover li{
 		display:block;
 		}
+	ul#menu-principal ul.sub-menu a:hover{
+		margin-left:10px;
+		}
 /* =Comments
 ----------------------------------------------- */
 
