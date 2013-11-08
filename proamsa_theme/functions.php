@@ -248,3 +248,22 @@ function new_excerpt_length($length) {
  return 25;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
+
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * function lenguages
+ *
+ */
+ 
+ function language_selector_flags(){
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if(!empty($languages)){
+        foreach($languages as $l){
+            if(!$l['active']) {
+    echo '<a href="'.$l['url'].'">';
+    echo '<img src="'.IMG_DIR."/".$l['language_code'].'-icon.png" height="38" alt="" width="38" />';
+    echo '</a>';
+   }
+        }
+    }
+}

@@ -24,7 +24,7 @@
 		<div class="wraper">
     	<div class="main-header">
         	<div class="contact-logos">
-            	<span class="icon"><a href="#"><img src="<?php echo IMG_DIR; ?>/icono-ingles.png" width="40" height="40" alt=""/></a></span>
+            	<span class="icon"><?php language_selector_flags(); ?></span>
             	<span class="icon"><img src="<?php echo IMG_DIR; ?>/icono-telefono.png" width="37" height="38" alt=""/>
                 	<span class="arrow-bg"><span>( 506 ) 0000 - 0000</span></span>
                 </span>
