@@ -468,6 +468,10 @@ body{
 		height: 180px;
 		float:left;
 		background:url(img/white-60.png);
+		transition: background-image 0.5s;
+		}
+	.logo:hover{
+		background: url(img/white-80.png);
 		}
 	.contact-logos{
 		position:absolute;
@@ -526,6 +530,7 @@ body{
 		list-style:none;
 		font-family: 'Oswald', sans-serif;
 		background:url(img/nav-li-bg.png) no-repeat 0 center;
+		transition: background-color 0.5s;
 		}
 	ul.menu > li:hover, 
 	ul.menu > li.current-menu-item{
@@ -563,6 +568,7 @@ body{
 		width:130px;
 		height:30px;
 		background:url(img/sub-bg.png);
+		transition: background-image 0.5s;
 		}
 	li li{
 		margin-top:2px;
@@ -577,6 +583,7 @@ body{
 		text-decoration:none;
 		color:#fff;
 		margin-left:5px;
+		transition: margin-left 0.3s;
 	}
 	ul#menu-principal > li:hover li{
 		display:block;
@@ -625,6 +632,7 @@ body{
 		float: left;
 		margin-left: 12px;
 		background: url(img/white-70.png);
+		transition: background-image 0.5s;
 		}
 	.logo-company:hover{
 		background: url(img/white-80.png);
