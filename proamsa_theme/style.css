@@ -737,17 +737,17 @@ div.entry-meta{
 /* button post read more
 ---------------------------------------------- */	
 
-button.post-leer-mas{
+button{
 	height:25px;
 	width:90px;
 	border-radius:20px;
 	background-color:#658c3d;
 	text-align:center;
 	}
-button.post-leer-mas a{
+button a{
 	color:#FFF;	
 	}
-button.post-leer-mas:hover{
+button:hover{
 	background:#76a743;
 	}
 	
@@ -797,4 +797,68 @@ input.wpcf7-form-control.wpcf7-submit{
 input.wpcf7-form-control.wpcf7-submit:hover{
 	background:#76a743;
 	}
-	
+select.wpcf7-form-control.wpcf7-select{
+	width:324px;
+	height:27px;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	}
+
+/* front page styles
+---------------------------------------------- */
+
+.home .inner{
+	background-image:none;
+	padding: 10px 10px;
+	}
+
+.quienes-somos-frontpage{
+	width: 45%;
+	height:450px;
+	float:left;
+	padding:10px 10px 0 20px;
+	background:url(img/white-80.png);
+	}
+.quienes-somos-frontpage h2{
+	font-size:24px;
+	margin-bottom:20px;
+	color:#658B3C;
+	}
+.quienes-somos-frontpage img{
+	width:87%;
+	max-height: 200px;
+	margin-left:5%;
+	margin-right:8%;
+	margin-bottom: 15px;
+	}
+.quienes-somos-frontpage button{
+	margin-bottom:15px;
+	}
+.noticias-frontpage{
+	width: 45%;
+	height:450px;
+	padding:10px 10px 0 20px;
+	float:right;
+	overflow:hidden;
+	background:url(img/white-80.png);
+	}
+
+.noticias-frontpage h2{
+	font-size:24px;
+	margin-bottom:20px;
+	color:#658B3C;
+	}
+.noticias-frontpage h3 a{
+	margin-bottom:20px;
+	font-size:20px;
+	color:#326377;
+	}
+.front-page-post {
+	float:left;
+	}
+.front-page-post button{
+	margin-bottom:30px;	
+	}
+.front-page-post img{
+	margin-bottom:15px;
+	}

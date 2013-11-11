@@ -245,7 +245,7 @@ add_action( 'widgets_init', 'default_unregister_widgets' );
  */
 
 function new_excerpt_length($length) {
- return 25;
+ return ((is_home())?10:25);
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
@@ -267,3 +267,10 @@ add_filter('excerpt_length', 'new_excerpt_length');
         }
     }
 }
+
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * post support type
+ *
+ */
+ add_post_type_support( 'page', 'excerpt' );
