@@ -33,19 +33,20 @@ jQuery(document).ready(function($){
 			
 		var current = location.protocol + '//' + location.hostname + ((location.port)?':'+location.port:'')+ location.pathname;
 		if (event.value){
-			
-			$mainContent.slideUp('fast', function(){
-				$mainContent.empty().load(base + event.value + ' .inner', function(response){
-					
-					var $dom = $(document.createElement("html"));
-					$dom[0].innerHTML = response;
-					
-					$('body').attr('class',$dom.find('body').attr('class'));
-
-					$mainContent.slideDown('fast');
-					
-				});
-			})
+			if(event.value != '/'+location.hash){
+				$mainContent.slideUp('fast', function(){
+					$mainContent.empty().load(base + event.value + ' .inner', function(response){
+						
+						var $dom = $(document.createElement("html"));
+						$dom[0].innerHTML = response;
+						
+						$('body').attr('class',$dom.find('body').attr('class'));
+	
+						$mainContent.slideDown('fast');
+						
+					});
+				})
+			}
 		}
 					
 		if (base + '/' != current) {		
