@@ -66,9 +66,14 @@ jQuery(document).ready(function($){
 		slide_interval          :   3000,		
 		transition              :   1, 	
 		slides  :  	[ {image : IMG_DIR + "/bg-1.jpg"} ,
-					  {image : IMG_DIR + "/bg-4.jpg"} ,
 					  {image : IMG_DIR + "/bg-2.jpg"} ,
-					  {image : IMG_DIR + "/bg-3.jpg"} 
+					  {image : IMG_DIR + "/bg-3.jpg"} ,
+					  {image : IMG_DIR + "/bg-4.jpg"} ,
+					  {image : IMG_DIR + "/bg-5.jpg"} ,
+					  {image : IMG_DIR + "/bg-6.jpg"} ,
+					  {image : IMG_DIR + "/bg-7.jpg"} ,
+					  {image : IMG_DIR + "/bg-8.jpg"} ,
+					  {image : IMG_DIR + "/bg-9.jpg"} 
 					]
 	});	
 	
