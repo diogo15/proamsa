@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
 			if(event.value != '/'+location.hash){
 				$mainContent.slideUp('fast', function(){
 					$mainContent.empty().load(base + event.value + ' .inner', function(response){
-						
+						$.get('/wp-content/plugins/contact-form-7/includes/js/scripts.js', function(data) { eval(data); });
 						var $dom = $(document.createElement("html"));
 						$dom[0].innerHTML = response;
 						
