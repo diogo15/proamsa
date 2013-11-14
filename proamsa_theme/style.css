@@ -536,7 +536,7 @@ body{
 	ul.menu > li.current-menu-item{
 		background-color:#336377;
 		}
-	.nav li:first-child{
+	ul.menu > li:first-child{
 		background-image:none;
 		}
 	.nav li.dos-lineas a{
@@ -563,10 +563,10 @@ body{
 	ul#menu-principal ul.sub-menu{
 		padding-top:2px;
 		}
-	ul#menu-principal ul.sub-menu li{
+    ul.sub-menu > li{
 		display:none;
-		width:130px;
-		height:30px;
+		min-width:200px;
+		min-height:30px;
 		background:url(img/sub-bg.png);
 		transition: background-image 0.5s;
 		}
@@ -591,6 +591,28 @@ body{
 	ul#menu-principal ul.sub-menu a:hover{
 		margin-left:10px;
 		}
+
+/* Estilos de sub sub menú
+----------------------------------------------- */
+ul.sub-menu  ul.sub-menu{
+	padding-left:202px;
+	}
+ul.sub-menu ul.sub-menu{
+	display:none;
+	width:220px;
+	}
+
+li  li  li{
+		margin-left:1px;
+		position:absolute;
+		top:0px;
+		display:block;	
+		}
+ul.sub-menu li:hover > ul{
+	display:block;
+	}
+
+
 /* =Comments
 ----------------------------------------------- */
 
