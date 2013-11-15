@@ -745,7 +745,8 @@ ul.sub-menu li:hover > ul
 		padding: 20px 25px;
 		min-height:154px;
 		background:url(img/white-80.png);
-		font-size: 13px;
+		font-size: 15px;
+		font-size:1.5rem;
 		color:#343A34;
 		}
 	
@@ -944,10 +945,6 @@ form p
 	font-size: 16px;
 	font-family: 'Oswald', sans-serif;
 	}
-form.wpcf7-form 
-{
-	width:400px;
-	}
 input.wpcf7-form-control.wpcf7-submit 
 {
 	height:30px;
@@ -970,6 +967,26 @@ select.wpcf7-form-control.wpcf7-select
 	border-radius: 3px;
 	}
 
+.form-nombre{
+	margin-left:30px;
+	float:left;
+	}
+.form-correo{
+	float:left;
+	margin-left:30px;
+	}
+.form-telefono{
+	margin-left:30px;
+	float:left;
+	}
+.form-pais{
+	margin-left:30px;
+	float:left;
+	}
+.form-mensaje{
+	width:92%;
+	margin:0 auto;
+	}
 /* front page styles
 ---------------------------------------------- */
 
@@ -982,7 +999,7 @@ select.wpcf7-form-control.wpcf7-select
 .quienes-somos-frontpage 
 {
 	width: 45%;
-	height:450px;
+	height:490px;
 	float:left;
 	padding:10px 10px 0 20px;
 	background:url(img/white-80.png);
@@ -1008,7 +1025,7 @@ select.wpcf7-form-control.wpcf7-select
 .noticias-frontpage 
 {
 	width: 45%;
-	height:450px;
+	height:490px;
 	padding:10px 10px 0 20px;
 	float:right;
 	overflow:hidden;
@@ -1039,29 +1056,7 @@ select.wpcf7-form-control.wpcf7-select
 {
 	margin-bottom:15px;
 	}
-/* two colums content
----------------------------------------------- */
-.two-colums-one 
-{
-	width:48%;
-	float:left;
-	text-align:center;
-	}
-.two-colums-one li li 
-{
-	list-style-type: square;
-	}
-.two-colums-two 
-{
-	width:48%;
-	margin-left:4%;
-	float:left;
-	text-align:center;
-	}
-.two-colums-two li li 
-{
-	list-style-type: square;
-	}
+
 	
 /* tables style
 ---------------------------------------------- */
