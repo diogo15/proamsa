@@ -33,7 +33,8 @@ del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td  
+{
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -44,13 +45,15 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	vertical-align: baseline;
 }
-html {
+html  
+{
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
-body {
+body  
+{
 	background: #fff;
 }
 article,
@@ -62,35 +65,44 @@ footer,
 header,
 main,
 nav,
-section {
+section  
+{
 	display: block;
 }
-ol, ul {
+ol, ul  
+{
 	list-style: none;
 }
-table { /* tables still need 'cellspacing="0"' in the markup */
+table  
+{ /* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 	border-spacing: 0;
 }
-caption, th, td {
+caption, th, td  
+{
 	font-weight: normal;
 	text-align: left;
 }
 blockquote:before, blockquote:after,
-q:before, q:after {
+q:before, q:after  
+{
 	content: "";
 }
-blockquote, q {
+blockquote, q  
+{
 	quotes: "" "";
 }
-a:focus {
+a:focus  
+{
 	outline: thin dotted;
 }
 a:hover,
-a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+a:active  
+{ /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
 	outline: 0;
 }
-a img {
+a img  
+{
 	border: 0;
 }
 
@@ -102,7 +114,8 @@ body,
 button,
 input,
 select,
-textarea {
+textarea  
+{
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
@@ -111,10 +124,12 @@ textarea {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6  
+{
 	clear: both;
 }
-hr {
+hr  
+{
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
@@ -122,42 +137,54 @@ hr {
 }
 
 /* Text elements */
-p {
+p  
+{
 	margin-bottom: 1.5em;
 }
-ul, ol {
+ul, ol  
+{
 	margin: 0 0 1.5em 3em;
 }
-ul {
+ul  
+{
 	list-style: disc;
 }
-ol {
+ol  
+{
 	list-style: decimal;
 }
 li > ul,
-li > ol {
+li > ol  
+{
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
-dt {
+dt  
+{
 	font-weight: bold;
 }
-dd {
+dd  
+{
 	margin: 0 1.5em 1.5em;
 }
-b, strong {
+b, strong  
+{
 	font-weight: bold;
 }
-dfn, cite, em, i {
+dfn, cite, em, i  
+{
 	font-style: italic;
 }
-blockquote {
+blockquote  
+{
 	margin: 0 1.5em;
 }
-address {
+address  
+{
 	margin: 0 0 1.5em;
 }
-pre {
+pre  
+{
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
@@ -168,68 +195,83 @@ pre {
 	overflow: auto;
 	padding: 1.6em;
 }
-code, kbd, tt, var {
+code, kbd, tt, var  
+{
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
-abbr, acronym {
+abbr, acronym  
+{
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
-mark, ins {
+mark, ins  
+{
 	background: #fff9c0;
 	text-decoration: none;
 }
 sup,
-sub {
+sub  
+{
 	font-size: 75%;
 	height: 0;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
-sup {
+sup  
+{
 	bottom: 1ex;
 }
-sub {
+sub  
+{
 	top: .5ex;
 }
-small {
+small  
+{
 	font-size: 75%;
 }
-big {
+big  
+{
 	font-size: 125%;
 }
-figure {
+figure  
+{
 	margin: 0;
 }
-table {
+table  
+{
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-th {
+th  
+{
 	font-weight: bold;
 }
-img {
+img  
+{
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
 button,
 input,
 select,
-textarea {
+textarea  
+{
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
 button,
-input {
+input  
+{
 	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
 }
 button,
 html input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"]  
+{
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
@@ -250,26 +292,31 @@ input[type="submit"]:focus,
 button:active,
 html input[type="button"]:active,
 input[type="reset"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active  
+{
 	border-color: #aaa #bbb #bbb #bbb;
 	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"]  
+{
 	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
-input[type="search"] {
+input[type="search"]  
+{
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
 	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing:    content-box;
 	box-sizing:         content-box;
 }
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+input[type="search"]::-webkit-search-decoration  
+{ /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
 button::-moz-focus-inner,
-input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+input::-moz-focus-inner  
+{ /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
 	padding: 0;
 }
@@ -278,7 +325,8 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
-textarea {
+textarea  
+{
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -288,17 +336,20 @@ input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
-textarea:focus {
+textarea:focus  
+{
 	color: #111;
 }
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"] {
+input[type="search"]  
+{
 	padding: 3px;
 }
-textarea {
+textarea  
+{
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
@@ -306,43 +357,51 @@ textarea {
 }
 
 /* Links */
-a {
+a  
+{
 	color:#658B3C;
 	text-decoration:none;
 }
-a:visited {
+a:visited  
+{
 }
 a:hover,
 a:focus,
-a:active {
+a:active  
+{
 }
 
 /* Alignment */
-.alignleft {
+.alignleft  
+{
 	display: inline;
 	float: left;
 	margin-right: 1.5em;
 }
-.alignright {
+.alignright  
+{
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
 }
-.aligncenter {
+.aligncenter  
+{
 	clear: both;
 	display: block;
 	margin: 0 auto;
 }
 
 /* Text meant only for screen readers */
-.screen-reader-text {
+.screen-reader-text  
+{
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
-.screen-reader-text:focus {
+.screen-reader-text:focus  
+{
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -363,12 +422,14 @@ a:active {
 
 /* Clearing */
 .clear:before,
-.clear:after{
+.clear:after 
+{
 	content: '';
 	display: table;
 }
 
-.clear:after{
+.clear:after 
+{
 	clear: both;
 }
 
@@ -396,50 +457,62 @@ a:active {
 
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
+.comment-content img.wp-smiley  
+{
 	border: none;
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
 }
-.wp-caption {
+.wp-caption  
+{
 	border: 1px solid #ccc;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*="wp-image-"]  
+{
 	display: block;
 	margin: 1.2% auto 0;
 	max-width: 98%;
 }
-.wp-caption-text {
+.wp-caption-text  
+{
 	text-align: center;
 }
-.wp-caption .wp-caption-text {
+.wp-caption .wp-caption-text  
+{
 	margin: 0.8075em 0;
 }
-.site-main .gallery {
+.site-main .gallery  
+{
 	margin-bottom: 1.5em;
 }
-.gallery-caption {
+.gallery-caption  
+{
 }
-.site-main .gallery a img {
+.site-main .gallery a img  
+{
 	border: none;
 	height: auto;
 	max-width: 90%;
 }
-.site-main .gallery dd {
+.site-main .gallery dd  
+{
 	margin: 0;
 }
-.site-main .gallery-columns-4 .gallery-item {
+.site-main .gallery-columns-4 .gallery-item  
+{
 }
-.site-main .gallery-columns-4 .gallery-item img {
+.site-main .gallery-columns-4 .gallery-item img  
+{
 }
 
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
-object {
+object  
+{
 	max-width: 100%;
 }
 
@@ -447,33 +520,40 @@ object {
 /* Estilos de header
 ----------------------------------------------- */
 
-body{
+body 
+{
 		margin:0px;
 		padding:0px;
 		}
-	.clear{
+	.clear 
+{
 		clear:both;
 		}
-	.wraper{
+	.wraper 
+{
 		width: 960px;
 		margin: 0 auto;
 		}
-	.main-header{
+	.main-header 
+{
 		position:relative;
 		height:180px;
 		margin-bottom:30px;
 		}
-	.logo{
+	.logo 
+{
 		width: 255px;
 		height: 180px;
 		float:left;
 		background:url(img/white-60.png);
 		transition: background-image 0.5s;
 		}
-	.logo:hover{
+	.logo:hover 
+{
 		background: url(img/white-80.png);
 		}
-	.contact-logos{
+	.contact-logos 
+{
 		position:absolute;
 		right:15px;
 		width:115px;
@@ -482,7 +562,8 @@ body{
 		padding-top: 3px;
 		box-shadow: 2px 2px 9px #000;
 		}
-	.contact-logos .icon .arrow-bg{
+	.contact-logos .icon .arrow-bg 
+{
 		display:none;
 		position:absolute;
 		background: url(img/arrow.png) no-repeat 143px 0;
@@ -492,10 +573,12 @@ body{
 		top:40px;
 		text-align:center;
 	 }
-	 .contact-logos .icon:hover .arrow-bg{
+	 .contact-logos .icon:hover .arrow-bg 
+{
 		 display:block;
  		 }
-	.contact-logos .icon .arrow-bg span{
+	.contact-logos .icon .arrow-bg span 
+{
 		display:block;
 		background-color:#fff;
 		margin-top: 7px;
@@ -504,14 +587,16 @@ body{
 		color:#62889b;
 		box-shadow: 2px 3px 5px #000;
 		}
-	.icon{
+	.icon 
+{
 		display:block;
 		position:relative;
 		height:40px;
 		width:33%;
 		float:left;
 		}
-	.nav{
+	.nav 
+{
 		height:70px;
 		width: 685px;
 		float:right;
@@ -519,10 +604,12 @@ body{
 		background-color:#49859f;
 		box-shadow: 4px 4px 18px #000;
 		}
-	.nav ul{
+	.nav ul 
+{
 		margin:0px;
 		}
-	ul.menu > li {
+	ul.menu > li  
+{
 		position:relative;
 		width:14%;
 		height:70px;
@@ -533,22 +620,28 @@ body{
 		transition: background-color 0.5s;
 		}
 	ul.menu > li:hover, 
-	ul.menu > li.current-menu-item{
+	ul.menu > li.current-menu-item 
+{
 		background-color:#336377;
 		}
-	ul.menu > li:first-child{
+	ul.menu > li:first-child 
+{
 		background-image:none;
 		}
-	.nav li.dos-lineas a{
+	.nav li.dos-lineas a 
+{
 		line-height: 26px;
 		}
-	ul.menu > li.dos-lineas > a {
+	ul.menu > li.dos-lineas > a  
+{
 		padding:10px;
 		}
-	ul.menu > li.largo {
+	ul.menu > li.largo  
+{
 		width:16%;
 		}
-	ul.menu > li > a {
+	ul.menu > li > a  
+{
 		height:50px;
 		display:block;
 		padding: 20px 0 0 0;
@@ -560,56 +653,67 @@ body{
 		
 /* Estilos de sub menú
 ----------------------------------------------- */
-	ul#menu-principal ul.sub-menu{
+	ul#menu-principal ul.sub-menu 
+{
 		padding-top:2px;
 		}
-    ul.sub-menu > li{
+    ul.sub-menu > li 
+{
 		display:none;
 		min-width:200px;
 		min-height:30px;
 		background:url(img/sub-bg.png);
 		transition: background-image 0.5s;
 		}
-	li li{
+	li li 
+{
 		margin-top:2px;
 		position:relative;
 		display:block;
 		}
-	ul#menu-principal ul.sub-menu li:hover{
+	ul#menu-principal ul.sub-menu li:hover 
+{
 		background:url(img/sub-bg-hover.png);
 	}
-	ul#menu-principal ul.sub-menu a{
+	ul#menu-principal ul.sub-menu a 
+{
 		display:block;
 		text-decoration:none;
 		color:#fff;
 		margin-left:5px;
 		transition: margin-left 0.3s;
 	}
-	ul#menu-principal > li:hover li{
+	ul#menu-principal > li:hover li 
+{
 		display:block;
 		}
-	ul#menu-principal ul.sub-menu a:hover{
+	ul#menu-principal ul.sub-menu a:hover 
+{
 		margin-left:10px;
 		}
 
 /* Estilos de sub sub menú
 ----------------------------------------------- */
-ul.sub-menu  ul.sub-menu{
+ul.sub-menu  ul.sub-menu 
+{
 	padding-left:202px;
 	}
-ul.sub-menu ul.sub-menu{
+ul.sub-menu ul.sub-menu 
+{
 	position:absolute;
 	display:none;
 	width:220px;
 	}
 
-li  li  li{
+li  li  li 
+{
 		margin-left:1px;
 		position:relative;
 		bottom:28px;
 		display:block;	
 		}
-ul.sub-menu li:hover > ul{
+ul.sub-menu li:hover > ul 
+{
 	display:block;
 	}
 
@@ -617,14 +721,17 @@ ul.sub-menu li:hover > ul{
 /* =Comments
 ----------------------------------------------- */
 
-.comment-content a {
+.comment-content a  
+{
 	word-wrap: break-word;
 }
-.bypostauthor {
+.bypostauthor  
+{
 }
 /* Estilos de content
 ----------------------------------------------- */
-.main-content{
+.main-content 
+{
 		width:843px;
 		margin: 0 auto;
 		padding: 1px 0 1px 0; 
@@ -632,7 +739,8 @@ ul.sub-menu li:hover > ul{
 		background:url(img/white-40.png);
 		
 		}
-	.inner{
+	.inner 
+{
 		margin: 20px;
 		padding: 20px 25px;
 		min-height:154px;
@@ -645,11 +753,13 @@ ul.sub-menu li:hover > ul{
 /* Estilos de footer
 ----------------------------------------------- */
 
-.footer-logos{
+.footer-logos 
+{
 		min-height:100px;
 		margin-top: 25px;
 		}
-	.logo-company {
+	.logo-company  
+{
 		width: 312px;
 		height: 103px;
 		float: left;
@@ -657,25 +767,30 @@ ul.sub-menu li:hover > ul{
 		background: url(img/white-70.png);
 		transition: background-image 0.5s;
 		}
-	.logo-company:hover{
+	.logo-company:hover 
+{
 		background: url(img/white-80.png);
 		}
-	.logo-company:first-child {
+	.logo-company:first-child  
+{
 		margin-left: 0px;
 		}
-	.footer-contact{
+	.footer-contact 
+{
 		margin: 20px 0 20px 0;
 		height:63px;
 		padding: 6px 38px 6px 9px;
 		background-color:#49859E;
 		}
-	.contact-logo{
+	.contact-logo 
+{
 		width:89px;
 		height:62px;
 		float:left;
 		background:url(img/white-70.png);
 		}
-	.company-info{
+	.company-info 
+{
 		width:450px;
 		height:60px;
 		display:block;
@@ -684,22 +799,26 @@ ul.sub-menu li:hover > ul{
 		color:#FFF;
 		font-size:9px;
 		}
-	img.facebook{
+	img.facebook 
+{
 		position:relative;
 		left:75px;
 		top:16px;
 		display:block;
 		float:left;
 	}
-	.contactenos{
+	.contactenos 
+{
 		width:210px;
 		float:right;
 		}
-	.contactenos img.arrow-right{
+	.contactenos img.arrow-right 
+{
 		float:left;
 		margin-top:20px;
 		}
-	.contactenos p{
+	.contactenos p 
+{
 		width:170px;
 		height:58px;
 		float:left;
@@ -707,93 +826,112 @@ ul.sub-menu li:hover > ul{
 		font-size:16px;
 		font-family: arial;
 		}
-	.contactenos p span{
+	.contactenos p span 
+{
 		font-size:12px;
 	}
-	.contactenos img.arrow-left{
+	.contactenos img.arrow-left 
+{
 		float:left;
 		margin-top:20px;
 		}
-	.footer-legal{
+	.footer-legal 
+{
 		margin: 0 0 20px 0;
 		min-height:60px;
 		}
-	.footer-legal p{
+	.footer-legal p 
+{
 		font-size:13px;
 		font-family: Arial, sans-serif;
 		color:#c6d8e4;
 		}
-	.footer-legal p.copy{
+	.footer-legal p.copy 
+{
 		float:left;
 		}
-	.footer-legal p.credit{
+	.footer-legal p.credit 
+{
 		margin-top: 17px;
 		float:right;
 		}
-	a.dame-click{
+	a.dame-click 
+{
 		text-decoration:none;
 		color:#FFF;
 		}
 /* Estilos de posts
 ----------------------------------------------- */
 
-article{
+article 
+{
 	margin-bottom:50px;
 	}
-article .post-img{
+article .post-img 
+{
 	float: left;
 	margin-right: 3%;
 	width: 29%;
 	}
-header.entry-header{
+header.entry-header 
+{
 	float: left;
 	width: 65%;
 	margin-top: 10px;
 	}
-.entry-meta{
+.entry-meta 
+{
 	margin-bottom:12px;
 	}
-div.entry-meta{
+div.entry-meta 
+{
 	margin-top:10px;
 	}
 	
 /* button post read more
 ---------------------------------------------- */	
 
-button{
+button 
+{
 	height:25px;
 	width:90px;
 	border-radius:20px;
 	background-color:#658c3d;
 	text-align:center;
 	}
-button a{
+button a 
+{
 	color:#FFF;	
 	}
-button:hover{
+button:hover 
+{
 	background:#76a743;
 	}
 	
 	
 /* Misc Styles
 ---------------------------------------------- */	
-h1,h2,h3,h4,h5,h6 { 
+h1,h2,h3,h4,h5,h6  
+{ 
 	font-family: 'Oswald', sans-serif; 
 	margin-bottom:14px;
 	font-weight:normal;
 	}
 	
-h1{
+h1 
+{
 	font-size:24px;
 	margin-bottom:20px;
 	color:#658B3C;
 	}
-h2{
+h2 
+{
 	margin-bottom:20px;
 	font-size:20px;
 	color:#326377;
 	}
-h2.entry-title{
+h2.entry-title 
+{
 	font-size:23px;
 	margin-bottom:1px;
 	}
@@ -801,14 +939,17 @@ h2.entry-title{
 /* Contact form styles
 ---------------------------------------------- */
 
-form p{
+form p 
+{
 	font-size: 16px;
 	font-family: 'Oswald', sans-serif;
 	}
-form.wpcf7-form{
+form.wpcf7-form 
+{
 	width:400px;
 	}
-input.wpcf7-form-control.wpcf7-submit{
+input.wpcf7-form-control.wpcf7-submit 
+{
 	height:30px;
 	width:90px;
 	border-radius:20px;
@@ -817,10 +958,12 @@ input.wpcf7-form-control.wpcf7-submit{
 	text-align:center;
 	color:#FFF;
 	}
-input.wpcf7-form-control.wpcf7-submit:hover{
+input.wpcf7-form-control.wpcf7-submit:hover 
+{
 	background:#76a743;
 	}
-select.wpcf7-form-control.wpcf7-select{
+select.wpcf7-form-control.wpcf7-select 
+{
 	width:324px;
 	height:27px;
 	border:1px solid #ccc;
@@ -830,34 +973,40 @@ select.wpcf7-form-control.wpcf7-select{
 /* front page styles
 ---------------------------------------------- */
 
-.home .inner{
+.home .inner 
+{
 	background-image:none;
 	padding: 10px 10px;
 	}
 
-.quienes-somos-frontpage{
+.quienes-somos-frontpage 
+{
 	width: 45%;
 	height:450px;
 	float:left;
 	padding:10px 10px 0 20px;
 	background:url(img/white-80.png);
 	}
-.quienes-somos-frontpage h2{
+.quienes-somos-frontpage h2 
+{
 	font-size:24px;
 	margin-bottom:20px;
 	color:#658B3C;
 	}
-.quienes-somos-frontpage img{
+.quienes-somos-frontpage img 
+{
 	width:87%;
 	max-height: 200px;
 	margin-left:5%;
 	margin-right:8%;
 	margin-bottom: 15px;
 	}
-.quienes-somos-frontpage button{
+.quienes-somos-frontpage button 
+{
 	margin-bottom:15px;
 	}
-.noticias-frontpage{
+.noticias-frontpage 
+{
 	width: 45%;
 	height:450px;
 	padding:10px 10px 0 20px;
@@ -866,41 +1015,113 @@ select.wpcf7-form-control.wpcf7-select{
 	background:url(img/white-80.png);
 	}
 
-.noticias-frontpage h2{
+.noticias-frontpage h2 
+{
 	font-size:24px;
 	margin-bottom:20px;
 	color:#658B3C;
 	}
-.noticias-frontpage h3 a{
+.noticias-frontpage h3 a 
+{
 	margin-bottom:20px;
 	font-size:20px;
 	color:#326377;
 	}
-.front-page-post {
+.front-page-post  
+{
 	float:left;
 	}
-.front-page-post button{
+.front-page-post button 
+{
 	margin-bottom:30px;	
 	}
-.front-page-post img{
+.front-page-post img 
+{
 	margin-bottom:15px;
 	}
 /* two colums content
 ---------------------------------------------- */
-.two-colums-one{
+.two-colums-one 
+{
 	width:48%;
 	float:left;
 	text-align:center;
 	}
-.two-colums-one li li{
+.two-colums-one li li 
+{
 	list-style-type: square;
 	}
-.two-colums-two{
+.two-colums-two 
+{
 	width:48%;
 	margin-left:4%;
 	float:left;
 	text-align:center;
 	}
-.two-colums-two li li{
+.two-colums-two li li 
+{
 	list-style-type: square;
 	}
+	
+/* tables style
+---------------------------------------------- */
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table > tbody > tr{
+	background:#E8E8E8;
+	}
+.table > thead > tr > th {
+	font-size:18px;
+	font-family:'Oswald', Arial;
+	color:#3C3C3C;
+	}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.table .table {
+  background-color: #ffffff;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: #f5f5f5;
+}
+table col[class*="col-"] {
+  float: none;
+  display: table-column;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  float: none;
+  display: table-cell;
+}
