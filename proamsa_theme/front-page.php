@@ -16,28 +16,30 @@ get_header(); ?>
 		<?php $primer_query = new WP_Query( 'page_id=7' ); ?>
 
 		<div class="quienes-somos-frontpage">
-        <h2>Quienes Somos</h2>
+        
 		<?php if ( $primer_query->have_posts() ) : ?>
 			<?php while ( $primer_query->have_posts() ) : $primer_query->the_post(); ?>
-				   
-                           <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
-            <?php   
-            
-            if ( has_post_thumbnail() ) 
-                the_post_thumbnail();
-            else 
-                echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
-            
-            ?>
-        </a>
-                            
+			
+            <h2><?php the_title(); ?></h2>
+            	   
+            <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
+				<?php   
+                if ( has_post_thumbnail() ) 
+                    the_post_thumbnail();
+                else 
+                    echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
+                ?>            
+        	</a>                            
 				
-				<?php the_excerpt(); ?>
+			<?php the_excerpt(); ?>
                 
-                 <button type="button" class="quienes-somos" value="leer mas">
-    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">VER MÁS...</a>
-    </button>
+            <button type="button" class="quienes-somos" value="leer mas">
+            <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">
+                <?php _e('VER MÁS...','proamsa_theme') ?>
+            </a>
+            </button>
 			<?php endwhile; ?>
+            
 		<?php endif; ?>
         </div>
         
@@ -48,29 +50,37 @@ get_header(); ?>
         <?php $segunda_query = new WP_Query( array('post_type' => 'post') ); ?>
         
         <div class="noticias-frontpage">
+        
+        <span class="arrow-prev"></span>
+        <span class="arrow-next"></span>
             
-            <h2>Noticias</h2>
-            <?php if ( $segunda_query->have_posts() ) : ?>
-                <?php while ( $segunda_query->have_posts() ) : $segunda_query->the_post(); ?>
-                			<div class="front-page-post">
-                                <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></h3>
-                                <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
-                            <?php   
-                            
-                            if ( has_post_thumbnail() ) 
-                                the_post_thumbnail();
-                            else 
-                                echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
-                            
-                            ?>
-                        </a>
-                                <?php the_excerpt(); ?>
-                              <button type="button" class="post-leer-mas" value="leer mas">
-    							<a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">VER MÁS...</a>
-    						  </button>
-                        </div>
-                <?php endwhile; ?>
-            <?php endif; ?>
+        <h2><?php _e('Noticias','proamsa_theme') ?></h2>
+            
+            <div id="news-container" class="news-wrapper">
+                <?php if ( $segunda_query->have_posts() ) : ?>
+                    <?php while ( $segunda_query->have_posts() ) : $segunda_query->the_post(); ?>
+                                <div class="front-page-post">
+                                    <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></h3>
+                                    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
+                                <?php   
+                                
+                                if ( has_post_thumbnail() ) 
+                                    the_post_thumbnail();
+                                else 
+                                    echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
+                                
+                                ?>
+                            </a>
+                                    <?php the_excerpt(); ?>
+                                  <button type="button" class="post-leer-mas" value="leer mas">
+                                    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">
+                                        <?php _e('VER MÁS...','proamsa_theme') ?>
+                                    </a>
+                                  </button>
+                            </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>   
             
         </div>
         <div class="clear"></div>

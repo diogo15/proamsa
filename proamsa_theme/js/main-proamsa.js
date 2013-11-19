@@ -1,10 +1,12 @@
 
 jQuery(document).ready(function($){
 	
-	
-	
-	var $mainContent = $('.main-content');
-	
+		
+	var 
+	$mainContent = $('.main-content'),
+	$newsContainer = $('#news-container'),
+	totalSlides = $('#news-container > div').length;
+	currentSlide = 0;
 
 
 	/* = Supersized Initialization
@@ -81,8 +83,17 @@ jQuery(document).ready(function($){
 	
 	
 	
-			
+	/* = Arrow News Animation
+	---------------------------------- */	
+	$('.arrow-next').click(function(){
+		currentSlide += (currentSlide+1 < totalSlides) ? 1 : 0;
+		$newsContainer.animate({ 'margin-left':-(currentSlide*380) });
+	})
 	
+	$('.arrow-prev').click(function(){
+		currentSlide -= (currentSlide) ? 1 : 0;
+		$newsContainer.animate({ 'margin-left':-(currentSlide*380) });
+	})
 	
 
 		

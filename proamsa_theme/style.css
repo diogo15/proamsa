@@ -1,25 +1,14 @@
 /*
+
 Theme Name: proamsa_theme
-Theme URI: http://underscores.me/
 Author: DameClick
-Author URI: http://underscores.me/
-Description: Description
+Description: Proamsa Theme
 Version: 1.0
-License: GNU General Public License
-License URI: license.txt
 Text Domain: proamsa_theme
 Domain Path: /languages/
-Tags:
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+http://www.blueprintcss.org/
 
- proamsa_theme is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
 */
 
 
@@ -1024,6 +1013,7 @@ select.wpcf7-form-control.wpcf7-select
 	}
 .noticias-frontpage 
 {
+	position:relative;
 	width: 45%;
 	height:490px;
 	padding:10px 10px 0 20px;
@@ -1047,6 +1037,8 @@ select.wpcf7-form-control.wpcf7-select
 .front-page-post  
 {
 	float:left;
+	width:340px;
+	margin-right:40px;
 	}
 .front-page-post button 
 {
@@ -1057,6 +1049,25 @@ select.wpcf7-form-control.wpcf7-select
 	margin-bottom:15px;
 	}
 
+.arrow-prev,
+.arrow-next{
+	display:block;
+	position:absolute;
+	width:17px;
+	height:24px;
+	top:14px;
+	right:13px;
+	background:url(img/arrows-news.png) no-repeat -17px 0;
+	}
+
+.arrow-prev{
+	right:30px;
+	background-position:0 0;
+	}	
+
+.news-wrapper{ 
+	width:5000px;
+	}
 	
 /* tables style
 ---------------------------------------------- */
