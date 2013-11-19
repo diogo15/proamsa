@@ -1,15 +1,37 @@
 
 jQuery(document).ready(function($){
 	
+	
+	
 	var $mainContent = $('.main-content');
+	
 
+
+	/* = Supersized Initialization
+	---------------------------------- */
+	$.supersized({
+		autoplay				:   0,
+		slide_interval          :   3000,		
+		transition              :   1, 	
+		slides  :  	[ {image : IMG_DIR + "/bg-1.jpg"} ,
+					  {image : IMG_DIR + "/bg-2.jpg"} ,
+					  {image : IMG_DIR + "/bg-3.jpg"} ,
+					  {image : IMG_DIR + "/bg-4.jpg"} ,
+					  {image : IMG_DIR + "/bg-5.jpg"} ,
+					  {image : IMG_DIR + "/bg-6.jpg"} ,
+					  {image : IMG_DIR + "/bg-7.jpg"} ,
+					  {image : IMG_DIR + "/bg-8.jpg"} ,
+					  {image : IMG_DIR + "/bg-9.jpg"} 
+					]
+	});	
+	
 	
 	
 	/* = AjaxLoading and deeplink
 	---------------------------------- */
-	
-	
 	$('.nav ul.menu a').click(function() {
+		
+		api.nextSlide();
 		
 		$(this).parent().siblings().removeClass("current-menu-item");
 		$(this).parent().addClass("current-menu-item");
@@ -60,22 +82,7 @@ jQuery(document).ready(function($){
 	
 	
 			
-	/* = Supersized Initialization
-	---------------------------------- */
-	$.supersized({
-		slide_interval          :   3000,		
-		transition              :   1, 	
-		slides  :  	[ {image : IMG_DIR + "/bg-1.jpg"} ,
-					  {image : IMG_DIR + "/bg-2.jpg"} ,
-					  {image : IMG_DIR + "/bg-3.jpg"} ,
-					  {image : IMG_DIR + "/bg-4.jpg"} ,
-					  {image : IMG_DIR + "/bg-5.jpg"} ,
-					  {image : IMG_DIR + "/bg-6.jpg"} ,
-					  {image : IMG_DIR + "/bg-7.jpg"} ,
-					  {image : IMG_DIR + "/bg-8.jpg"} ,
-					  {image : IMG_DIR + "/bg-9.jpg"} 
-					]
-	});	
+	
 	
 
 		
