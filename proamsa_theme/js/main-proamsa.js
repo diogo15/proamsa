@@ -73,10 +73,10 @@ jQuery(document).ready(function($){
 			}
 		}
 					
-		if (base + '/' != current) {		
+		if (base != current) {		
 		
 			var diff = current.replace(base, '');
-			location = base + '/#' + diff;
+			location = base + '#' + diff;
 		}	
 				
 	});

@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
-<script> var base = '<?php bloginfo( 'url' ); ?>',IMG_DIR = '<?php echo IMG_DIR; ?>';</script>
+<script> var base = '<?php echo trailingslashit( get_bloginfo( 'url' ) ); ?>',IMG_DIR = '<?php echo IMG_DIR; ?>';</script>
 
 <?php wp_head(); ?>
 

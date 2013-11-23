@@ -274,3 +274,49 @@ add_filter('excerpt_length', 'new_excerpt_length');
  *
  */
  add_post_type_support( 'page', 'excerpt' );
+ 
+ 
+ 
+ 
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * Downloads List
+ *
+ */
+function get_attachment_icons($echo = false){
+	$newLine = 0;
+	$directoy = get_bloginfo('template_directory');
+	$sAttachmentString = "<div class='documentIconsWrapper'> \n";
+	if ( $files = get_children(array(  
+	 'post_parent' => get_the_ID(),
+	 'post_type' => 'attachment',
+	 'numberposts' => -1,
+	 ))){
+	 foreach( $files as $file ){
+		$newLine++;
+		$file_link = wp_get_attachment_url($file->ID);    //get the url for linkage
+		$file_name_array=explode("/",$file_link); 
+		$file_name=array_reverse($file_name_array);  //creates an array out of the url and grabs the filename
+		$sAttachmentString .= "<div class='documentIcons".(($newLine%4==0)?" clear":"")."'>";
+		$sAttachmentString .= "<a href='$file_link'>";
+		$sAttachmentString .= "<img src='".$directoy."/img/pdf.png'/>";
+		$sAttachmentString .= "</a>";
+		$sAttachmentString .= "<br>";
+		$sAttachmentString .= "<a href='$file_link'>$file_name[0]</a>";
+		$sAttachmentString .= "</div>";
+		}
+	}
+	
+	$sAttachmentString .= "</div>";
+	
+	if($echo){
+		echo $sAttachmentString;
+	}
+
+return $sAttachmentString;
+
+}
+add_shortcode('mostrarDescargas', 'get_attachment_icons');
+
+
+/*---------------------------------------------------------------------------------------------*/
