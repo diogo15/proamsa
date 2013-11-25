@@ -4,8 +4,6 @@ jQuery(document).ready(function($){
 		
 	var 
 	$mainContent = $('.main-content'),
-	$newsContainer = $('#news-container'),
-	totalSlides = $('#news-container > div').length;
 	currentSlide = 0;
 
 
@@ -85,12 +83,15 @@ jQuery(document).ready(function($){
 	
 	/* = Arrow News Animation
 	---------------------------------- */	
-	$('.arrow-next').click(function(){
+	$('body').on('click','.arrow-next',function() {
+		var $newsContainer = $('#news-container'),
+			totalSlides = $('#news-container > div').length;
 		currentSlide += (currentSlide+1 < totalSlides) ? 1 : 0;
 		$newsContainer.animate({ 'margin-left':-(currentSlide*380) });
 	})
-	
-	$('.arrow-prev').click(function(){
+	$('body').on('click','.arrow-prev',function() {
+		var $newsContainer = $('#news-container'),
+			totalSlides = $('#news-container > div').length;
 		currentSlide -= (currentSlide) ? 1 : 0;
 		$newsContainer.animate({ 'margin-left':-(currentSlide*380) });
 	})

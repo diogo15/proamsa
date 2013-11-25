@@ -26,7 +26,7 @@
         	<div class="contact-logos">
             	<span class="icon"><?php language_selector_flags(); ?></span>
             	<span class="icon"><img src="<?php echo IMG_DIR; ?>/icono-telefono.png" width="37" height="38" alt=""/>
-                	<span class="arrow-bg"><span>( 506 ) 0000 - 0000</span></span>
+                	<span class="arrow-bg"><span>( 506 ) 2283 - 0876</span></span>
                 </span>
                 
                 <span class="icon"><img src="<?php echo IMG_DIR; ?>/icono-correo.png" width="38" height="38" alt=""/>

@@ -31,13 +31,14 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php proamsa_theme_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 
 			<?php get_template_part( 'no-results', 'index' ); ?>
 
 		<?php endif; ?>
+		
+		<?php wp_pagenavi(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

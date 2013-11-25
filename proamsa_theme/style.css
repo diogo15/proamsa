@@ -526,6 +526,7 @@ body
 	.main-header 
 {
 		position:relative;
+		z-index:1;
 		height:180px;
 		margin-bottom:30px;
 		}
@@ -883,14 +884,15 @@ div.entry-meta
 
 button 
 {
-	height:25px;
-	width:90px;
+	height:30px;
+	min-width:90px;
 	border-radius:20px;
 	background-color:#658c3d;
 	text-align:center;
 	}
 button a 
 {
+	display:block;
 	color:#FFF;	
 	}
 button:hover 
@@ -999,12 +1001,12 @@ select.wpcf7-form-control.wpcf7-select
 	margin-bottom:20px;
 	color:#658B3C;
 	}
-.quienes-somos-frontpage img 
+.quienes-somos-imagen 
 {
 	width:87%;
-	max-height: 200px;
+	max-height:200px;
 	margin-left:5%;
-	margin-right:8%;
+	margin-right:5%;
 	margin-bottom: 15px;
 	}
 .quienes-somos-frontpage button 
@@ -1131,3 +1133,41 @@ table th[class*="col-"] {
   float: none;
   display: table-cell;
 }
+
+/* paginador style
+---------------------------------------------- */
+.wp-pagenavi {
+	clear: both;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	border: 1px solid #BFBFBF;
+	padding: 3px 5px;
+	margin: 2px;
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border-color: #000;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+
+/* gallery style
+---------------------------------------------- */
+
+.gallery.clearfix{
+	display:table;
+	margin: 0 auto;
+	}
+.gllr_image_block{
+	margin-left:20px;
+	}
+.gallery_detail_box{
+	width:48%;
+	}
+button.ver-galeria{
+	margin-top:30px;
+	}

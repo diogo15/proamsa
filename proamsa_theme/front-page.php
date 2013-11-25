@@ -13,24 +13,24 @@ get_header(); ?>
 		<!-- Primera consulta para cargar la pagina de quienes somos -->
         
         
-		<?php $primer_query = new WP_Query( 'page_id=7' ); ?>
+		<?php $primer_query = new WP_Query( 'page_id=83' ); ?>
 
 		<div class="quienes-somos-frontpage">
         
 		<?php if ( $primer_query->have_posts() ) : ?>
 			<?php while ( $primer_query->have_posts() ) : $primer_query->the_post(); ?>
 			
-            <h2><?php the_title(); ?></h2>
-            	   
-            <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
-				<?php   
-                if ( has_post_thumbnail() ) 
-                    the_post_thumbnail();
-                else 
-                    echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
-                ?>            
-        	</a>                            
-				
+            <h2>Quienes Somos</h2>
+            	 <div class="quienes-somos-imagen">  
+                    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
+                        <?php   
+                        if ( has_post_thumbnail() ) 
+                            the_post_thumbnail();
+                        else 
+                            echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
+                        ?>            
+                    </a>                            
+				</div>
 			<?php the_excerpt(); ?>
                 
             <button type="button" class="quienes-somos" value="leer mas">

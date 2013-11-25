@@ -69,6 +69,8 @@
 		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'proamsa_theme' ), '<span class="edit-link">', '</span>' ); ?>
+        
+       
 	</footer><!-- .entry-meta -->
     
 </article><!-- #post-## -->
