@@ -83,12 +83,15 @@ function proamsa_theme_scripts() {
 	wp_enqueue_style( 'proamsa_theme-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'supersized-jquery-style', THEME_DIR . '/css/supersized.css' );
 	wp_enqueue_style( 'oswald-googlefont', 'http://fonts.googleapis.com/css?family=Oswald:300,400' );
+	wp_enqueue_style( 'nivo-lightbox', THEME_DIR . '/css/nivo-lightbox.css' );
+	wp_enqueue_style( 'nivo-lightbox-default', THEME_DIR . '/nivo-lightbox/default/default.css' );
 	
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'skip-link-focus-fix', JS_DIR . '/skip-link-focus-fix.js', array(), '1' );	
 	wp_enqueue_script( 'supersized-jquery-JS', JS_DIR . '/supersized.3.2.7.min.js', array(), '1' );
 	wp_enqueue_script( 'address-jquery-JS', JS_DIR . '/jquery.address-1.5.min.js', array(), '1' );
 	wp_enqueue_script( 'proamsa-main-JS', JS_DIR . '/main-proamsa.js', array(), '1'  );
+	wp_enqueue_script( 'nivo-lightbox', JS_DIR . '/nivo-lightbox.min.js', array(), '1'  );
 	
 	
 	

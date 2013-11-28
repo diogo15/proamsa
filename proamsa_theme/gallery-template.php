@@ -74,7 +74,7 @@ Template Name: Gallery Template
 						<div class="gallery_detail_box">
 							<div><?php echo $post->post_title; ?></div>
 							<div><?php echo the_excerpt_max_charlength(100); ?></div>
-							<a href="<?php echo $permalink; echo basename( get_permalink( $post->ID ) ); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
+							<a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo $permalink; echo basename( get_permalink( $post->ID ) ); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
 						</div>
 						<div class="clear"></div>
 					</li>

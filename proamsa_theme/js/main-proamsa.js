@@ -63,7 +63,7 @@ jQuery(document).ready(function($){
 						$dom[0].innerHTML = response;
 						
 						$('body').attr('class',$dom.find('body').attr('class'));
-	
+						$('.gllr_image_block a').nivoLightbox();
 						$mainContent.slideDown('fast');
 						
 					});
@@ -102,3 +102,6 @@ jQuery(document).ready(function($){
 	
 		
 })
+/* = nivo lightbox
+	---------------------------------- */	
+
