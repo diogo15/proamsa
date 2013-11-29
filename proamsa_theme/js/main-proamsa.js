@@ -51,7 +51,7 @@ jQuery(document).ready(function($){
 		
 	});
 	
-	
+
 	$.address.change(function(event) {
 			
 		var current = location.protocol + '//' + location.hostname + ((location.port)?':'+location.port:'')+ location.pathname;
@@ -67,7 +67,9 @@ jQuery(document).ready(function($){
 						$('body').attr('class',$dom.find('body').attr('class'));
 						$('.gllr_image_block a').nivoLightbox();
 						$animWrapper.height($mainContent.height());
-						$mainContent.slideDown('fast');
+						$mainContent.waitForImages(function() {
+							 $(this).slideDown('fast');
+						});
 						
 						
 					});
