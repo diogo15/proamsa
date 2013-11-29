@@ -27,11 +27,11 @@
         	<div class="contact-logos">
             	<span class="icon"><?php language_selector_flags(); ?></span>
             	<span class="icon"><img src="<?php echo IMG_DIR; ?>/icono-telefono.png" width="37" height="38" alt=""/>
-                	<span class="arrow-bg"><span>( 506 ) 2283 - 0876</span></span>
+                	<span class="arrow-bg"><span><?php echo get_box('telefono' , true);?></span></span>
                 </span>
                 
                 <span class="icon"><img src="<?php echo IMG_DIR; ?>/icono-correo.png" width="38" height="38" alt=""/>
-                <span class="arrow-bg"><span>info@grupoproamsa.com</span></span>
+                <span class="arrow-bg"><span><?php echo get_box('e-mail' , true);?></span></span>
                 </span>
             </div>
             <div class="logo">
