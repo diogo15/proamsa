@@ -1179,3 +1179,22 @@ button.ver-galeria{
 .file-btn{  vertical-align:middle; }
 .file-desc{ vertical-align:middle; }
 .file-desc p{ margin:0;}
+.documentIconsWrapper td{
+	padding:5px 0;
+	border-top:1px solid #ccc;
+	}
+.documentIconsWrapper td a.btn_download{
+	display:block;
+	width:100px;
+	padding:4px 0;
+	float:right;
+	background-color:#4a87a2;
+	color:#FFF;
+	font-family:'Oswald', sans-serif;
+	text-align:center;
+	}
+.documentIconsWrapper td.file-desc a{
+	font-size:18px;
+	font-family:'Oswald', sans-serif;
+	color:#326377;
+	}
