@@ -341,4 +341,15 @@ return $output;
 add_shortcode('mostrarDescargas', 'get_attachment_icons');
 
 
-/*---------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * Fix for Gallery Issue with uppercase Extension
+ *
+ */
+
+add_filter('sanitize_file_name', 'lowercase_upload_filename', 10);
+function lowercase_upload_filename( $file )
+{
+	$file = strtolower($file);    
+    return $file;
+}
