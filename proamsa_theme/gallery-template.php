@@ -37,7 +37,7 @@ Template Name: Gallery Template
 					$second_query = new WP_Query( $args );
 					if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) echo pdfprnt_show_buttons_for_custom_post_type( $second_query );
 					$count_all_albums = count($second_query->posts);
-					$per_page = $showitems = get_option( 'posts_per_page' );  
+					$per_page = $showitems = 10;  
 					if( $paged != 0 )
 						$start = $per_page * ($paged - 1);
 					else
@@ -54,10 +54,10 @@ Template Name: Gallery Template
 					if( empty ( $attachments ) ) {
 						$attachments = get_children( 'post_parent='.$post->ID.'&post_type=attachment&post_mime_type=image&numberposts=1' );
 						$id = key($attachments);
-						$image_attributes = wp_get_attachment_image_src( $id, 'album-thumb' );
+						$image_attributes = wp_get_attachment_image_src( $id, 'medium' );
 					}
 					else {
-						$image_attributes = wp_get_attachment_image_src( $attachments, 'album-thumb' );
+						$image_attributes = wp_get_attachment_image_src( $attachments, 'medium' );
 					}
 					if( 1 == $gllr_options['border_images'] ){
 						$gllr_border = 'border-width: '.$gllr_options['border_images_width'].'px; border-color:'.$gllr_options['border_images_color'].'; padding:0;';
@@ -69,12 +69,15 @@ Template Name: Gallery Template
 					}
 					$count++;
 				?>
-					<li>
+					<li><a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_permalink( $post->ID ); ?>">
 						<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][0][0]; ?>px; <?php echo $gllr_border; ?>" alt="<?php echo $post->post_title; ?>" title="<?php echo $post->post_title; ?>" src="<?php echo $image_attributes[0]; ?>" />
+                        </a>
 						<div class="gallery_detail_box">
-							<div><?php echo $post->post_title; ?></div>
+							<div><h2><?php echo $post->post_title; ?></h2></div>
 							<div><?php echo the_excerpt_max_charlength(100); ?></div>
-							<a href="<?php echo $permalink; echo basename( get_permalink( $post->ID ) ); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
+                            <button class="ver-galeria" type="button" value="ver-galeria">
+							<a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo $permalink; echo basename( get_permalink( $post->ID ) ); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
+                            </button>
 						</div>
 						<div class="clear"></div>
 					</li>
@@ -102,8 +105,6 @@ Template Name: Gallery Template
 					} else {?>
 						</div>
 					<?php } ?>
-			<?php comments_template(); ?>
 		</div>
 	</div>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
