@@ -302,7 +302,7 @@ function get_attachment_icons($echo = false){
 			case 'pdf':
 				$output .= "<img src='".$directoy."/img/file-pdf.png'/>";
 				break;
-			case 'xdoc':
+			case 'docx':
 			case 'doc':
 				$output .= "<img src='".$directoy."/img/file-doc.png'/>";
 				break;
