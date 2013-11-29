@@ -302,16 +302,16 @@ function get_attachment_icons($echo = false){
 			case 'pdf':
 				$output .= "<img src='".$directoy."/img/file-pdf.png'/>";
 				break;
-			case 'docx':
-			case 'doc':
+			case 'vnd.openxmlformats-officedocument.wordprocessingml.document':
+			case 'msword':
 				$output .= "<img src='".$directoy."/img/file-doc.png'/>";
 				break;
-			case 'xlsx':
-			case 'xls':
+			case 'vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+			case 'vnd.ms-excel':
 				$output .= "<img src='".$directoy."/img/file-xls.png'/>";
 				break;
-			case 'pptx':
-			case 'ppt':
+			case 'vnd.openxmlformats-officedocument.presentationml.presentation':
+			case 'vnd.ms-powerpoint':
 				$output .= "<img src='".$directoy."/img/file-ppt.png'/>";
 				break;
 		}		
