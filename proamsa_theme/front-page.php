@@ -3,6 +3,7 @@
  * The front page template file.
  *
  */
+$proamsa_options = get_option('proamsa_theme_options');
 
 get_header(); ?>
 
@@ -13,7 +14,7 @@ get_header(); ?>
 		<!-- Primera consulta para cargar la pagina de quienes somos -->
         
         
-		<?php $primer_query = new WP_Query( 'page_id=83' ); ?>
+		<?php $primer_query = new WP_Query( 'page_id='.$proamsa_options['id_number'] ); ?>
 
 		<div class="quienes-somos-frontpage">
         
