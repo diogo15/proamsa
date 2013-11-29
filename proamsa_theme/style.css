@@ -1171,3 +1171,11 @@ table th[class*="col-"] {
 button.ver-galeria{
 	margin-top:30px;
 	}
+	
+	
+/* Download Shortcode style
+---------------------------------------------- */
+.file-icon{ vertical-align:top; }
+.file-btn{  vertical-align:middle; }
+.file-desc{ vertical-align:middle; }
+.file-desc p{ margin:0;}

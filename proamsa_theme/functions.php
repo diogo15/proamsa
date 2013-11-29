@@ -289,34 +289,53 @@ add_filter('excerpt_length', 'new_excerpt_length');
 function get_attachment_icons($echo = false){
 	$newLine = 0;
 	$directoy = get_bloginfo('template_directory');
-	$sAttachmentString = "<div class='documentIconsWrapper'> \n";
-	if ( $files = get_children(array(  
-	 'post_parent' => get_the_ID(),
-	 'post_type' => 'attachment',
-	 'numberposts' => -1,
-	 ))){
-	 foreach( $files as $file ){
-		$newLine++;
-		$file_link = wp_get_attachment_url($file->ID);    //get the url for linkage
-		$file_name_array=explode("/",$file_link); 
-		$file_name=array_reverse($file_name_array);  //creates an array out of the url and grabs the filename
-		$sAttachmentString .= "<div class='documentIcons".(($newLine%4==0)?" clear":"")."'>";
-		$sAttachmentString .= "<a href='$file_link'>";
-		$sAttachmentString .= "<img src='".$directoy."/img/pdf.png'/>";
-		$sAttachmentString .= "</a>";
-		$sAttachmentString .= "<br>";
-		$sAttachmentString .= "<a href='$file_link'>$file_name[0]</a>";
-		$sAttachmentString .= "</div>";
-		}
+	$output = "<div class='documentIconsWrapper'> \n";
+	$attachments = new Attachments( 'attachments' ); 
+	if( $attachments->exist() ) {
+	 $output .= '<table>';
+	 while( $attachments->get() ) :
+	 $extension = $attachments->subtype();
+	    $output .= '<tr>';
+		$output .= '<td class="file-icon">';
+		$output .= "<a href='".$attachments->url()."'>";
+		switch ($extension) {
+			case 'pdf':
+				$output .= "<img src='".$directoy."/img/file-pdf.png'/>";
+				break;
+			case 'xdoc':
+			case 'doc':
+				$output .= "<img src='".$directoy."/img/file-doc.png'/>";
+				break;
+			case 'xlsx':
+			case 'xls':
+				$output .= "<img src='".$directoy."/img/file-xls.png'/>";
+				break;
+			case 'pptx':
+			case 'ppt':
+				$output .= "<img src='".$directoy."/img/file-ppt.png'/>";
+				break;
+		}		
+		$output .= "</a>";
+		$output .= '</td>';
+		$output .= '<td class="file-desc">';
+		$output .= "<a href='".$attachments->url()."'>".$attachments->field( 'title' )."</a>";
+		$output .= $attachments->field( 'caption' );
+		$output .= '</td>';
+		$output .= '<td class="file-btn">';
+		$output .= "<a class='btn_download' href='".$attachments->url()."'>Descargar</a>";
+		$output .= '</td>';
+		$output .= '</tr>';
+	  endwhile;
+	  $output .= '</table>';
 	}
 	
-	$sAttachmentString .= "</div>";
+	$output .= "</div>";
 	
 	if($echo){
-		echo $sAttachmentString;
+		echo $output;
 	}
 
-return $sAttachmentString;
+return $output;
 
 }
 add_shortcode('mostrarDescargas', 'get_attachment_icons');
