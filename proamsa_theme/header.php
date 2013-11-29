@@ -22,6 +22,7 @@
 <body <?php body_class(); ?>>
 
 		<div class="wraper">
+        
     	<div class="main-header">
         	<div class="contact-logos">
             	<span class="icon"><?php language_selector_flags(); ?></span>
@@ -41,6 +42,8 @@
             </div>
             <div class="clear"></div>
         </div>
+        
+        <div id="animation-wrapper">
     	<div class ="main-content">
        		<div class="inner">
           

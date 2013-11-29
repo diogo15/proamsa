@@ -3,6 +3,7 @@ jQuery(document).ready(function($){
 	
 		
 	var 
+	$animWrapper = $('#animation-wrapper'),
 	$mainContent = $('.main-content'),
 	currentSlide = 0;
 
@@ -56,6 +57,7 @@ jQuery(document).ready(function($){
 		var current = location.protocol + '//' + location.hostname + ((location.port)?':'+location.port:'')+ location.pathname;
 		if (event.value){
 			if(event.value != '/'+location.hash){
+				$animWrapper.height($mainContent.height());
 				$mainContent.slideUp('fast', function(){
 					$mainContent.empty().load(base + event.value + ' .inner', function(response){
 						$.get('/wp-content/plugins/contact-form-7/includes/js/scripts.js', function(data) { eval(data); });
@@ -64,7 +66,9 @@ jQuery(document).ready(function($){
 						
 						$('body').attr('class',$dom.find('body').attr('class'));
 						$('.gllr_image_block a').nivoLightbox();
+						$animWrapper.height($mainContent.height());
 						$mainContent.slideDown('fast');
+						
 						
 					});
 				})

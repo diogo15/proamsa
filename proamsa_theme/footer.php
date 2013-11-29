@@ -10,6 +10,7 @@
 
 		</div>
         </div>
+        </div>
         
         <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
             <div class="footer-logos">
