@@ -359,3 +359,11 @@ function lowercase_upload_filename( $file )
 	$file = strtolower($file);    
     return $file;
 }
+
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * resize img post noticias
+ *
+ */
+update_option('medium_crop', 1);
+add_image_size( 'homepage-thumb', 300, 190, true );

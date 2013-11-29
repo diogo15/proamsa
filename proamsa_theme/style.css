@@ -1002,12 +1002,15 @@ select.wpcf7-form-control.wpcf7-select
 	margin-bottom:20px;
 	color:#658B3C;
 	}
-.quienes-somos-imagen 
-{
-	width:87%;
+.quienes-somos-imagen {
+	width:94%;
 	max-height:200px;
-	margin-left:5%;
-	margin-right:5%;
+	text-align:center;
+	}
+.noticias-imagen{
+	text-align:center;
+	}
+.quienes-somos-imagen img{
 	margin-bottom: 15px;
 	}
 .quienes-somos-frontpage button 

@@ -12,9 +12,9 @@
             <?php   
             
             if ( has_post_thumbnail() ) 
-                the_post_thumbnail();
+                the_post_thumbnail('medium');
             else 
-                echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
+                echo '<img src="' . IMG_DIR . '/default-1.png" />';
             
             ?>
         </a>

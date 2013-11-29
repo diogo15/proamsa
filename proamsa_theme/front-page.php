@@ -26,13 +26,13 @@ get_header(); ?>
                     <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
                         <?php   
                         if ( has_post_thumbnail() ) 
-                            the_post_thumbnail();
+                            the_post_thumbnail('homepage-thumb');
                         else 
-                            echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
+                            echo '<img src="' . IMG_DIR . '/default-2.png" />';
                         ?>            
                     </a>                            
 				</div>
-			<?php the_excerpt(); ?>
+			<?php the_content(); ?>
                 
             <button type="button" class="quienes-somos" value="leer mas">
             <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">
@@ -62,16 +62,18 @@ get_header(); ?>
                     <?php while ( $segunda_query->have_posts() ) : $segunda_query->the_post(); ?>
                                 <div class="front-page-post">
                                     <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></h3>
-                                    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
-                                <?php   
-                                
-                                if ( has_post_thumbnail() ) 
-                                    the_post_thumbnail();
-                                else 
-                                    echo '<img src="' . IMG_DIR . '/default-img.jpg" />';
-                                
-                                ?>
-                            </a>
+                                    <div class="noticias-imagen">  
+                                        <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
+                                            <?php   
+                                            
+                                            if ( has_post_thumbnail() ) 
+                                                the_post_thumbnail('homepage-thumb');
+                                            else 
+                                                echo '<img src="' . IMG_DIR . '/default-2.png" />';
+                                            
+                                            ?>
+                                        </a>
+                            		</div>
                                     <?php the_excerpt(); ?>
                                   <button type="button" class="post-leer-mas" value="leer mas">
                                     <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">
