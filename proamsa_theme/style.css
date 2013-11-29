@@ -673,7 +673,8 @@ body
 		margin-left:5px;
 		transition: margin-left 0.3s;
 	}
-	ul#menu-principal > li:hover li 
+	ul#menu-principal > li:hover li
+
 {
 		display:block;
 		}

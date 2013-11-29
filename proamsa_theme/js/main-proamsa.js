@@ -102,12 +102,16 @@ jQuery(document).ready(function($){
 		$newsContainer.animate({ 'margin-left':-(currentSlide*380) });
 	})
 	
+/* = superfish
+	---------------------------------- */
+	function mostrarMenu(){$(this).addClass('hover');};
+	function esconderMenu(){$(this).removeClass('hover');};
+$("ul#menu-principal li").hoverIntent( mostrarMenu, esconderMenu );	
 
 		
 	
 	
 		
 })
-/* = nivo lightbox
-	---------------------------------- */	
+	
 
