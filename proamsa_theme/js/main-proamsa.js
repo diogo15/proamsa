@@ -67,8 +67,8 @@ jQuery(document).ready(function($){
 						$('body').attr('class',$dom.find('body').attr('class'));
 						$('.gllr_image_block a').nivoLightbox();
 						$animWrapper.height($mainContent.height());
-						$mainContent.waitForImages(function() {
-							 $(this).slideDown('fast');
+						$mainContent.slideDown('fast',function(){
+							$animWrapper.height('auto');
 						});
 						
 						

@@ -89,7 +89,6 @@ function proamsa_theme_scripts() {
 	
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'hoverIntent', JS_DIR . '/hoverIntent.js', array(), '1'  );
-	wp_enqueue_script( 'waitforimages', JS_DIR . '/jquery.waitforimages.min.js', array('jquery'), '1' );
 	wp_enqueue_script( 'skip-link-focus-fix', JS_DIR . '/skip-link-focus-fix.js', array(), '1' );	
 	wp_enqueue_script( 'supersized-jquery-JS', JS_DIR . '/supersized.3.2.7.min.js', array('jquery'), '1' );
 	wp_enqueue_script( 'address-jquery-JS', JS_DIR . '/jquery.address-1.5.min.js', array('jquery'), '1' );
