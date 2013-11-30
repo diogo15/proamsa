@@ -32,7 +32,7 @@ get_header(); ?>
                         ?>            
                     </a>                            
 				</div>
-			<?php the_content(); ?>
+			<?php the_excerpt(); ?>
                 
             <button type="button" class="quienes-somos" value="leer mas">
             <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">

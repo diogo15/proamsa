@@ -89,6 +89,7 @@ jQuery(document).ready(function($){
 						
 						$('body').attr('class',$dom.find('body').attr('class'));
 						$('.gllr_image_block a').nivoLightbox();
+						$('.gallery').pajinate({items_per_page:'1'});
 						$animWrapper.height($mainContent.height());
 						$mainContent.slideDown('fast',function(){
 							$animWrapper.height('auto');
@@ -135,7 +136,6 @@ $("ul#menu-principal li").hoverIntent( mostrarMenu, esconderMenu );
 	function addtrailingslash(url){
 		return (!url.match(/\/$/)) ? url += '/' : url;
 	}
-	
 		
 })
 	
