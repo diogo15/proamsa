@@ -44,6 +44,15 @@ jQuery(document).ready(function($){
 		return false;
 		
 	});
+	$('.company-info a , .footer-logos a').click(function() {
+		
+		api.nextSlide();
+		
+		var path = $(this).attr('href').replace(base, '');
+		$.address.value(path);
+		return false;
+		
+	});
 	
 	$('body').on('click','h2.entry-title a',function() {
 		

@@ -328,7 +328,7 @@ function get_attachment_icons($echo = false){
 		$output .= $attachments->field( 'caption' );
 		$output .= '</td>';
 		$output .= '<td class="file-btn">';
-		$output .= "<a class='btn_download' href='".$attachments->url()."'>Descargue Aquí</a>";
+		$output .= "<a class='btn_download' href='".$attachments->url()."'>" .__('Descargue Aquí' , 'proamsa_theme')."</a>";
 		$output .= '</td>';
 		$output .= '</tr>';
 	  endwhile;

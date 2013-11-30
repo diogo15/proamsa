@@ -24,7 +24,7 @@
                 	<img src="<?php echo IMG_DIR; ?>/footer-contact-logo.png" width="89" height="62" alt=""/>
                 </div>
                 <div class="company-info">
-           <?php echo get_box('informacion-compania-pie-de-pagina'); ?>
+          		 <?php echo get_box('informacion-compania-pie-de-pagina'); ?>
            		</div>
             <a href="#" ><img class="facebook" src="<?php echo IMG_DIR; ?>/facebook-logo.png" width="32" height="31" alt=""/></a>
             	<div class="contactenos">
@@ -40,7 +40,7 @@
          <div class="footer-legal">
        		<p class="copy">&copy; 2013 Todos los derechos reservados, Proamsa<br/>
 Teléfonos: CRC +(506) 2283-0876  DOM +(809) 986095  info@grupoproamsa.com</p>
-            <p class="credit">Diseñado y Desarrollado por <a class="dame-click" href="#"><img src="<?php echo IMG_DIR; ?>/dame-click-logo.png" alt=""/> DameClic</a></p>
+            <p class="credit">Diseñado y Desarrollado por <a class="dame-click" href="http://dameclic.com"><img src="<?php echo IMG_DIR; ?>/dame-click-logo.png" alt=""/> DameClic</a></p>
             <div class="clear"></div>
         </div>
     </div>

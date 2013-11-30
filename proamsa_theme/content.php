@@ -57,16 +57,12 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
     <button type="button" class="post-leer-mas" value="leer mas">
-    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">VER MÁS...</a>
+    <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>"><?php _e('VER MÁS...' , 'proamsa_theme');?></a>
     </button>
 
 	<footer class="entry-meta">
 		
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link">
-		<?php comments_popup_link( __( 'Leave a comment', 'proamsa_theme' ), __( '1 Comment', 'proamsa_theme' ), __( '% Comments', 'proamsa_theme' ) ); ?>
-        </span>
-		<?php endif; ?>
+		
 
 		<?php edit_post_link( __( 'Edit', 'proamsa_theme' ), '<span class="edit-link">', '</span>' ); ?>
         
