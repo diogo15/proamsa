@@ -37,23 +37,37 @@ jQuery(document).ready(function($){
 		$(this).parent().siblings().removeClass("current-menu-item");
 		$(this).parent().addClass("current-menu-item");
 		
-		var path = $(this).attr('href').replace(base, '');
-		$.address.value(path);
+		var path = $(this).attr('href');
+		path = addtrailingslash(path).replace(base, '');			
+		$.address.value( path );
+		
 		return false;
 		
 	});
 	
 	$('body').on('click','h2.entry-title a',function() {
 		
-		var path = $(this).attr('href').replace(base, '');
-		$.address.value(path);
+		var path = $(this).attr('href');
+		path = addtrailingslash(path).replace(base, '');			
+		$.address.value( path );
+		
+		return false;
+		
+	});
+	
+	$('body').on('click','#breadcrumbs a',function() {
+		
+		var path = $(this).attr('href');
+		path = addtrailingslash(path).replace(base, '');			
+		$.address.value( path );
+		
 		return false;
 		
 	});
 	
 
 	$.address.change(function(event) {
-			
+		
 		var current = location.protocol + '//' + location.hostname + ((location.port)?':'+location.port:'')+ location.pathname;
 		if (event.value){
 			if(event.value != '/'+location.hash){
@@ -108,8 +122,10 @@ jQuery(document).ready(function($){
 	function esconderMenu(){$(this).removeClass('hover');};
 $("ul#menu-principal li").hoverIntent( mostrarMenu, esconderMenu );	
 
-		
 	
+	function addtrailingslash(url){
+		return (!url.match(/\/$/)) ? url += '/' : url;
+	}
 	
 		
 })
