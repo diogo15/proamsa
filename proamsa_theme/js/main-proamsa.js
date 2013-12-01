@@ -54,7 +54,7 @@ jQuery(document).ready(function($){
 		
 	});
 	
-	$('body').on('click','h2.entry-title a',function() {
+	$('body').on('click','h2.entry-title a , #breadcrumbs a , .wp-pagenavi a , .logo a',function() {
 		
 		var path = $(this).attr('href');
 		path = addtrailingslash(path).replace(base, '');			
@@ -64,15 +64,6 @@ jQuery(document).ready(function($){
 		
 	});
 	
-	$('body').on('click','#breadcrumbs a',function() {
-		
-		var path = $(this).attr('href');
-		path = addtrailingslash(path).replace(base, '');			
-		$.address.value( path );
-		
-		return false;
-		
-	});
 	
 
 	$.address.change(function(event) {

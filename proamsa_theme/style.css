@@ -1254,7 +1254,16 @@ td.file-date{
 a.active_page{
 	background:#658B3C ;
 	color:#FFF;
+	}
+.wp-pagenavi span.current{
+	background-color:#658B3C;
+	border:none;
 	}	
-	
+.wp-pagenavi a , 
+.wp-pagenavi span{
+	background-color:#49859f;
+	color:#FFF;
+	border:none;
+	}
 	
 	
