@@ -27,7 +27,8 @@
 					));
 					if ( count( $posts ) > 0 ) {
 						$count_image_block = 0; ?>
-						<div class="gallery clearfix">
+                        
+						<div class="gallery clearfix content">
 							<?php foreach ( $posts as $attachment ) { 
 								$key = "gllr_image_text";
 								$link_key = "gllr_link_url";
@@ -69,6 +70,8 @@
 							<?php } ?>
 							</div>
 						<?php } ?>
+                        
+                        <div class="page_navigation"></div>
 					</div>
 					<div class="clear"></div>
 				<?php endwhile; else: ?>
@@ -86,8 +89,13 @@
 					<?php }
 				} ?>
 				<?php comments_template(); ?>
+                
+                
+                
 			</div>			
 		</div>
+        
+         
 	
 	<script type="text/javascript">
 		(function($){

@@ -89,12 +89,11 @@ jQuery(document).ready(function($){
 						
 						$('body').attr('class',$dom.find('body').attr('class'));
 						$('.gllr_image_block a').nivoLightbox();
-						$('.gallery').pajinate({items_per_page:'1'});
+						$('.entry-content').pajinate({item_container_id : '.gallery', items_per_page:'1',nav_label_first : '<<', nav_label_last : '>>',	nav_label_prev : '<', nav_label_next : '>'});
 						$animWrapper.height($mainContent.height());
 						$mainContent.slideDown('fast',function(){
 							$animWrapper.height('auto');
-						});
-						
+						});						
 						
 					});
 				})

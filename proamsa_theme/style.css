@@ -1223,3 +1223,26 @@ button.ver-galeria{
 	font-family:'Oswald', sans-serif;
 	color:#326377;
 	}
+	
+/* Pajinate Plugin Styles
+---------------------------------------------- */	
+.page_navigation{ 
+	margin-left: 84px;
+	}
+.page_navigation a{
+	padding:3px 5px;
+	margin:2px;
+	color:white;
+	text-decoration:none;
+	float: left;
+	font-family: Tahoma;
+	font-size: 12px;
+	background-color:#49859f;
+	}
+a.active_page{
+	background:#658B3C ;
+	color:#FFF;
+	}	
+	
+	
+	
