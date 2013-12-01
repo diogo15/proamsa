@@ -126,16 +126,31 @@ jQuery(document).ready(function($){
 		$newsContainer.animate({ 'margin-left':-(currentSlide*380) });
 	})
 	
-/* = superfish
-	---------------------------------- */
-	function mostrarMenu(){$(this).addClass('hover');};
-	function esconderMenu(){$(this).removeClass('hover');};
-$("ul#menu-principal li").hoverIntent( mostrarMenu, esconderMenu );	
-
 	
+	/* = HoverIntent
+	---------------------------------- */
+	function mostrarMenu(){
+		$(this).addClass('hover');
+	};
+	
+	function esconderMenu(){
+		$(this).removeClass('hover');
+	};
+	
+	$(".mainMenu li").hoverIntent({
+		over: mostrarMenu,
+		out: esconderMenu,
+		timeout: 500
+	});
+	
+	
+	/* = Helpers
+	---------------------------------- */
 	function addtrailingslash(url){
 		return (!url.match(/\/$/)) ? url += '/' : url;
-	}
+	}	
+	
+	
 		
 })
 	

@@ -585,126 +585,127 @@ body
 		width:33%;
 		float:left;
 		}
-	.nav 
-{
-		height:70px;
-		width: 685px;
-		float:right;
-		margin-top: 90px;
-		background-color:#49859f;
-		box-shadow: 4px 4px 18px #000;
-		}
-	.nav ul 
-{
-		margin:0px;
-		}
-	ul.menu > li  
-{
-		position:relative;
-		width:14%;
-		height:70px;
-		float:left;
-		list-style:none;
-		font-family: 'Oswald', sans-serif;
-		background:url(img/nav-li-bg.png) no-repeat 0 center;
-		transition: background-color 0.5s;
-		}
-	ul.menu > li:hover, 
-	ul.menu > li.current-menu-item 
-{
-		background-color:#336377;
-		}
-	ul.menu > li:first-child 
-{
-		background-image:none;
-		}
-	.nav li.dos-lineas a 
-{
-		line-height: 26px;
-		}
-	ul.menu > li.dos-lineas > a  
-{
-		padding:10px;
-		}
-	ul.menu > li.largo  
-{
-		width:16%;
-		}
-	ul.menu > li > a  
-{
-		height:50px;
-		display:block;
-		padding: 20px 0 0 0;
-		text-decoration:none;
-		color:#fff;
-		font-size:20px;
-		text-align:center;
-		}
+		
+		
+/* Estilos del Menú
+----------------------------------------------- */
+	
+.mainMenu {
+	height:70px;
+	width: 685px;
+	float:right;
+	margin-top: 90px;
+	background-color:#49859f;
+	box-shadow: 4px 4px 18px #000;
+	}
+.mainMenu ul {
+	margin:0px;
+	}
+.mainMenu > ul > li  {
+	position:relative;
+	width:14%;
+	height:70px;
+	float:left;
+	list-style:none;
+	font-family: 'Oswald', sans-serif;
+	background:url(img/nav-li-bg.png) no-repeat 0 center;
+	transition: background-color 0.5s;
+	}
+.mainMenu > ul > li:hover, 
+.mainMenu > ul > li.current-menu-item {
+	background-color:#336377;
+	}
+.mainMenu > ul > li:first-child {
+	background-image:none;
+	}
+.mainMenu > ul > li.dos-lineas a {
+	line-height: 26px;
+	}
+.mainMenu > ul > li.dos-lineas > a  {
+	padding:10px;
+	}
+.mainMenu > ul > li.largo  {
+	width:16%;
+	}
+.mainMenu > ul > li > a  {
+	height:50px;
+	display:block;
+	padding: 20px 0 0 0;
+	text-decoration:none;
+	color:#fff;
+	font-size:20px;
+	text-align:center;
+	}
 		
 /* Estilos de sub menú
 ----------------------------------------------- */
-	ul#menu-principal ul.sub-menu 
-{
-		padding-top:2px;
-		}
-    ul.sub-menu > li 
-{
-		display:none;
-		min-width:200px;
-		min-height:30px;
-		background:url(img/sub-bg.png);
-		transition: background-image 0.5s;
-		}
-	li li 
-{
-		margin-top:2px;
-		position:relative;
-		display:block;
-		}
-	ul#menu-principal ul.sub-menu li:hover 
-{
-		background:url(img/sub-bg-hover.png);
-	}
-	ul#menu-principal ul.sub-menu a 
-{
-		display:block;
-		text-decoration:none;
-		color:#fff;
-		margin-left:5px;
-		transition: margin-left 0.3s;
-	}
-	ul#menu-principal > li:hover li
 
+.mainMenu ul ul{ 
+	width:200px;
+	display:none;
+	position:absolute;
+	}
+.mainMenu > ul > li > ul{
+	top:70px;
+	padding-top:2px;
+	}
+.mainMenu > ul ul li {
+	display:block;
+	position:relative;
+	min-width:200px;
+	min-height:30px;
+	background:url(img/sub-bg.png);
+	transition: background-image 0.5s;
+	}
+.mainMenu > ul > ul > li{
+	margin-top:2px;
+	position:relative;
+	display:block;
+	}
+.mainMenu ul ul.sub-menu li:hover,
+.mainMenu ul ul.sub-menu li.hover
 {
-		display:block;
-		}
-	ul#menu-principal ul.sub-menu a:hover 
-{
-		margin-left:10px;
-		}
+	background:url(img/sub-bg-hover.png);
+	}
+.mainMenu ul ul a{
+	display:block;
+	text-decoration:none;
+	color:#fff;
+	margin-left:5px;
+	transition: margin-left 0.3s;
+	}
+.mainMenu ul > li:hover > ul{
+	display:block;
+	}
+.mainMenu ul ul.sub-menu a:hover{
+	margin-left:10px;
+	}
 
 /* Estilos de sub sub menú
 ----------------------------------------------- */
-ul.sub-menu  ul.sub-menu 
-{
-	padding-left:202px;
-	}
-ul.sub-menu ul.sub-menu 
-{
-	position:absolute;
+.mainMenu ul ul ul{
+	top:0;
+	left:200px;	
 	display:none;
 	width:220px;
+	padding-left:2px;
 	}
 
-li  li  li 
-{
-		margin-left:1px;
-		position:relative;
-		bottom:28px;
-		display:block;	
-		}
-ul.sub-menu li:hover > ul 
-{
+.mainMenu ul ul  li {
+	margin-left:1px;
+	position:relative;
+	display:block;	
+	}
+.mainMenu ul li:hover ul,
+.mainMenu ul li.hover ul {
+	display:block;
+	}
+.mainMenu ul li:hover ul ul,
+.mainMenu ul li.hover ul ul {
+	display:none;
+	}
+.mainMenu ul li:hover li:hover ul,
+.mainMenu ul li.hover li.hover ul {
 	display:block;
 	}
 
