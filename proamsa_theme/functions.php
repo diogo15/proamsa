@@ -330,6 +330,9 @@ function get_attachment_icons($echo = false){
 		$output .= "<a href='".$attachments->url()."'>".$attachments->field( 'title' )."</a>";
 		$output .= $attachments->field( 'caption' );
 		$output .= '</td>';
+		$output .= '<td>';
+		$output .= __('Actualizado el: ' , 'proamsa_theme'). $attachments->date();
+		$output .= '</td>';
 		$output .= '<td class="file-btn">';
 		$output .= "<a class='btn_download' href='".$attachments->url()."'>" .__('Descargue Aquí' , 'proamsa_theme')."</a>";
 		$output .= '</td>';
