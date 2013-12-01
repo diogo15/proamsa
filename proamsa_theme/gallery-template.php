@@ -36,7 +36,8 @@ Template Name: Gallery Template
 					$args = array(
 						'post_type'					=> 'gallery',
 						'post_status'				=> 'publish',
-						'orderby'						=> 'post_date',
+						'orderby'						=> 'menu_order', 
+						'order'						=> 'ASC',
 						'posts_per_page'		=> -1
 					);
 					$second_query = new WP_Query( $args );
