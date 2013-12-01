@@ -692,6 +692,7 @@ body
 	}
 
 .mainMenu ul ul  li {
+	margin-top:3px;
 	margin-left:1px;
 	position:relative;
 	display:block;	
@@ -1099,9 +1100,14 @@ select.wpcf7-form-control.wpcf7-select
 /* tables style
 ---------------------------------------------- */
 
+table {
+	height: 50px;
+  overflow: scroll;
+	}
 .table {
   width: 100%;
   margin-bottom: 20px;
+  
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
