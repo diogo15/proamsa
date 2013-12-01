@@ -697,7 +697,7 @@ body
 	margin-top:3px;
 	margin-left:1px;
 	position:relative;
-	display:block;	
+	line-height:28px;
 	}
 .mainMenu ul li:hover ul,
 .mainMenu ul li.hover ul {
