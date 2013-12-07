@@ -30,7 +30,7 @@ jQuery(document).ready(function($){
 	
 	/* = AjaxLoading and deeplink
 	---------------------------------- */
-	$('.nav ul.menu a').click(function() {
+	$('.mainNav ul.menu a').click(function() {
 		
 		api.nextSlide();
 		
