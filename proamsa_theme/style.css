@@ -455,6 +455,10 @@ a:active
 	margin-top: 0;
 	padding: 0;
 }
+.entry-content-1{
+	float: left;
+	width: 66%;
+	}
 .wp-caption  
 {
 	border: 1px solid #ccc;
@@ -697,7 +701,7 @@ body
 	margin-top:3px;
 	margin-left:1px;
 	position:relative;
-	line-height:28px;
+	display:block;	
 	}
 .mainMenu ul li:hover ul,
 .mainMenu ul li.hover ul {
@@ -753,6 +757,7 @@ body
 {
 		min-height:100px;
 		margin-top: 25px;
+		clear:both;
 		}
 	.logo-company  
 {
@@ -875,6 +880,9 @@ article .post-img
 	float: left;
 	margin-right: 3%;
 	width: 29%;
+	}
+article header.entry-header{
+	margin-top:0px;
 	}
 header.entry-header 
 {
@@ -1239,7 +1247,8 @@ td.file-date{
 /* Pajinate Plugin Styles
 ---------------------------------------------- */	
 .page_navigation{ 
-	margin-left: 84px;
+	margin-left: 40%;
+	margin-top: 30px;
 	}
 .page_navigation a{
 	padding:3px 5px;
@@ -1255,6 +1264,9 @@ a.active_page{
 	background:#658B3C ;
 	color:#FFF;
 	}
+.wp-pagenavi{
+	margin-left:40%;
+	}
 .wp-pagenavi span.current{
 	background-color:#658B3C;
 	border:none;
@@ -1264,6 +1276,10 @@ a.active_page{
 	background-color:#49859f;
 	color:#FFF;
 	border:none;
+	}
+strong.breadcrumb_last{
+	font-size:13px;
+	color:#49859f;
 	}
 	
 	

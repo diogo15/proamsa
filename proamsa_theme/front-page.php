@@ -61,7 +61,6 @@ get_header(); ?>
                 <?php if ( $segunda_query->have_posts() ) : ?>
                     <?php while ( $segunda_query->have_posts() ) : $segunda_query->the_post(); ?>
                                 <div class="front-page-post">
-                                    <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></h3>
                                     <div class="noticias-imagen">  
                                         <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php echo get_post_permalink(); ?>">
                                             <?php   
@@ -74,6 +73,8 @@ get_header(); ?>
                                             ?>
                                         </a>
                             		</div>
+                                    <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                                    
                                     <?php the_excerpt(); ?>
                                   <button type="button" class="post-leer-mas" value="leer mas">
                                     <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">

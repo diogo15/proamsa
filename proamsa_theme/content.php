@@ -45,7 +45,7 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 
-	<div class="entry-content">
+	<div class="entry-content-1">
 		<?php the_excerpt(); ?>
  
 		<?php
