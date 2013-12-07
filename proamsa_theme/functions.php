@@ -156,22 +156,23 @@ register_post_type( 'sprint_boxes',
 
 function get_box($id, $raw = false)
 {
-	// IF ID IS NOT NUMERIC CHECK FOR SLUG
-	if(!is_numeric($id))
-	{
+	if(!is_numeric($id)) {
 		$page = get_page_by_path( $id, null, 'sprint_boxes' );
-		$id = $page->ID;
+		$id = $page->ID;	
+		$id = icl_object_id($page->ID, 'sprint_boxes', false);
 	}
 
-	if($raw)
-	{
+	if($raw) {
 		return get_post_field('post_content', $id);
+		return get_post_field('post_content', icl_object_id($page->ID, 'sprint_boxes', false));
 	}
 	
 	$content = apply_filters( 'the_content', get_post_field('post_content', $id) );
+	$content = apply_filters( 'the_content', get_post_field('post_content', icl_object_id($page->ID, 'sprint_boxes', false)) );
+	
 	return $content;
-}
 
+}
 // Shortcode
 function boxes_shortcode($atts)
 {
