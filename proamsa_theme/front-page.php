@@ -1,4 +1,4 @@
-<?php
+v<?php
 /**
  * The front page template file.
  *
@@ -48,7 +48,7 @@ get_header(); ?>
         <!-- Segunda consulta para cargar todas las noticias -->
         
         
-        <?php $segunda_query = new WP_Query( array('post_type' => 'post') ); ?>
+        <?php $segunda_query = new WP_Query( array('post_type' => 'post','posts_per_page' => 4) ); ?>
         
         <div class="noticias-frontpage">
         
