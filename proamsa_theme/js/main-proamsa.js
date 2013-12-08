@@ -143,11 +143,11 @@ jQuery(document).ready(function($){
 		if($posts.length){
 			$.each( $posts ,function(){ 
 			
-				
+				var max_excerpt = 290;
 				var excerpt = $( this ).find('div.news_excerpt').text();
-				var title_height = $( this ).find('h3.news_title').height();
+				var title_length = $( this ).find('h3.news_title').text().length;
 				
-				var excerpt_cut = excerpt.substring(0, title_height + 10 );
+				var excerpt_cut = excerpt.substring(0, max_excerpt - ((title_length/32) * 50) );
 				var e_lastIndex = excerpt_cut.lastIndexOf(" ");
 				excerpt_cut = excerpt_cut.substring(0, e_lastIndex);
 				

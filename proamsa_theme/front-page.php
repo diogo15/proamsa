@@ -75,7 +75,7 @@ get_header(); ?>
                             		</div>
                                     
                                     <h3 class="news_title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-                                    <div class="news_excerpt"><?php the_excerpt(); ?>
+                                    <div class="news_excerpt"><?php the_excerpt(); ?></div>
                                     
                                   <button type="button" class="post-leer-mas" value="leer mas">
                                     <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">
