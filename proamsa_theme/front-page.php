@@ -14,7 +14,7 @@ get_header(); ?>
 		<!-- Primera consulta para cargar la pagina de quienes somos -->
         
         
-		<?php $primer_query = new WP_Query( 'page_id='.$proamsa_options['id_number'] ); ?>
+		<?php $primer_query = new WP_Query( 'page_id='.icl_object_id($proamsa_options['id_number'], 'page', false) ); ?>
 
 		<div class="quienes-somos-frontpage">
         
@@ -73,9 +73,10 @@ get_header(); ?>
                                             ?>
                                         </a>
                             		</div>
-                                    <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
                                     
-                                    <?php the_excerpt(); ?>
+                                    <h3 class="news_title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                                    <div class="news_excerpt"><?php the_excerpt(); ?>
+                                    
                                   <button type="button" class="post-leer-mas" value="leer mas">
                                     <a rel="address:/<?php echo basename(get_permalink()) ?>" href="<?php the_permalink(); ?>">
                                         <?php _e('VER MÁS...','proamsa_theme') ?>

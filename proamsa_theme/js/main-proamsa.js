@@ -74,13 +74,17 @@ jQuery(document).ready(function($){
 				$animWrapper.height($mainContent.height());
 				$mainContent.slideUp('fast', function(){
 					$mainContent.empty().load(base + event.value + ' .inner', function(response){
+						
 						$.get('/wp-content/plugins/contact-form-7/includes/js/scripts.js', function(data) { eval(data); });
+						
 						var $dom = $(document.createElement("html"));
 						$dom[0].innerHTML = response;
-						
 						$('body').attr('class',$dom.find('body').attr('class'));
+						
 						$('.gllr_image_block a').nivoLightbox();
 						$('.entry-content').pajinate({item_container_id : '.gallery', items_per_page:'1',nav_label_first : '<<', nav_label_last : '>>',	nav_label_prev : '<', nav_label_next : '>'});
+						trimTitlesAndExcerpts($('.front-page-post'));
+						
 						$animWrapper.height($mainContent.height());
 						$mainContent.slideDown('fast',function(){
 							$animWrapper.height('auto');
@@ -133,6 +137,28 @@ jQuery(document).ready(function($){
 		timeout: 500
 	});
 	
+	
+	function trimTitlesAndExcerpts($posts){
+		
+		if($posts.length){
+			$.each( $posts ,function(){ 
+			
+				
+				var excerpt = $( this ).find('div.news_excerpt').text();
+				var title_height = $( this ).find('h3.news_title').height();
+				
+				var excerpt_cut = excerpt.substring(0, title_height + 10 );
+				var e_lastIndex = excerpt_cut.lastIndexOf(" ");
+				excerpt_cut = excerpt_cut.substring(0, e_lastIndex);
+				
+				$(this).find('div.news_excerpt').html(excerpt_cut+'[...]');
+						
+			});//end foreach
+		}
+	}
+	
+	
+	trimTitlesAndExcerpts($('.front-page-post'));
 	
 	/* = Helpers
 	---------------------------------- */
