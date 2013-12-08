@@ -77,12 +77,17 @@ jQuery(document).ready(function($){
 						
 						$.get('/wp-content/plugins/contact-form-7/includes/js/scripts.js', function(data) { eval(data); });
 						
+						var photos_per_page = 1;
 						var $dom = $(document.createElement("html"));
 						$dom[0].innerHTML = response;
 						$('body').attr('class',$dom.find('body').attr('class'));
 						
 						$('.gllr_image_block a').nivoLightbox();
-						$('.entry-content').pajinate({item_container_id : '.gallery', items_per_page:'1',nav_label_first : '<<', nav_label_last : '>>',	nav_label_prev : '<', nav_label_next : '>'});
+						
+						if ($('body').hasClass('page-template-gallery-template-php'))
+							photos_per_page = 3;							
+						
+						$('.entry-content').pajinate({item_container_id : '.gallery', items_per_page:photos_per_page,nav_label_first : '<<', nav_label_last : '>>',	nav_label_prev : '<', nav_label_next : '>'});
 						trimTitlesAndExcerpts($('.front-page-post'));
 						
 						$animWrapper.height($mainContent.height());
