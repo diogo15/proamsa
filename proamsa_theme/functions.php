@@ -374,3 +374,73 @@ function lowercase_upload_filename( $file )
  */
 update_option('medium_crop', 1);
 add_image_size( 'homepage-thumb', 300, 190, true );
+
+
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * Custom pass form
+ *
+ */
+ 
+function my_password_form() {
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+    ' . __( "Necesitas una contraseña para ver el contenido de esta pagina:" ) . '
+    <label for="' . $label . '">' . __( "Password:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input type="submit" name="Submit" value="' . esc_attr__( "Enviar" ) . '" />
+    </form>
+    ';
+    return $o;
+}
+add_filter( 'the_password_form', 'my_password_form' );
+
+
+/*-------------------------------------------------------------------------------------------------------------
+ *
+ * Custom pass form
+ *
+ */
+ 
+add_action( 'add_meta_boxes', 'proamsa_meta_boxes' );
+add_action( 'save_post', 'proamsa_send_email', 10, 2 );
+
+function proamsa_meta_boxes(){
+	add_meta_box(
+			'email-post-class',		// Unique ID
+			esc_html__( 'Enviar Email', 'proamsa_theme' ),	// Title
+			'send_password_meta_box',		// Callback function
+			'page',					// Admin page (or post type)
+			'side',					// Context
+			'high'				// Priority
+		);
+}
+
+function send_password_meta_box( $object, $box ) { ?>
+	<?php wp_nonce_field( basename( __FILE__ ), 'proamsa_send_email_nonce' ); ?>
+	<p>
+		<label for="email-pass"><?php _e( "Enviar email con contrasena", 'proamsa_theme' ); ?></label>
+		<br />
+		<input class="widefat" type="text" name="email-pass" id="email-pass" size="30" />
+	</p>
+	<?php 
+}
+
+
+function proamsa_send_email( $post_id, $post ) {
+
+	if ( !isset( $_POST['proamsa_send_email_nonce'] ) || !wp_verify_nonce( $_POST['proamsa_send_email_nonce'], basename( __FILE__ ) ) )
+		return $post_id;
+	
+	
+	$email = ( isset( $_POST['email-pass'] ) ? $_POST['email-pass'] : '' );
+	$pass = $post->post_password;
+	$permalink = get_permalink( $post_id ); 
+
+	if ( $email && '' == $meta_value ){
+		$headers[] = 'From: Proamsa <info@proamsa.com>';
+		$sent = wp_mail( $email, "Acceso Proamsa", "Te han concedido acceso a esta pagina, \n{$permalink} \n utiliza la siguiente contraseña para acceder a ella: \n {$pass}", $headers );
+		
+	}
+
+}
+
