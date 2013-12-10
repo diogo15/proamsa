@@ -847,7 +847,24 @@ body
 {
 		margin: 0 0 20px 0;
 		min-height:60px;
+		font-size: 13px;
+		font-family: Arial, sans-serif;
+		color: #c6d8e4;
+		width: 49%;
+		float:left;
 		}
+.desinged-by{
+	float: right;
+	width: 40%;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+	color: #c6d8e4;
+	text-align: right;
+	margin-top: 22px;
+	}
+.desinged-by p{
+	display:inline;
+	}
 	.footer-legal p 
 {
 		font-size:13px;
@@ -1024,6 +1041,7 @@ select.wpcf7-form-control.wpcf7-select
 {
 	width: 45%;
 	height:490px;
+	position:relative;
 	float:left;
 	padding:10px 10px 0 20px;
 	background:url(img/white-80.png);
@@ -1047,7 +1065,8 @@ select.wpcf7-form-control.wpcf7-select
 	}
 .quienes-somos-frontpage button 
 {
-	margin-bottom:15px;
+	position:absolute;
+	bottom:12;
 	}
 .noticias-frontpage 
 {
@@ -1077,10 +1096,12 @@ select.wpcf7-form-control.wpcf7-select
 	float:left;
 	width:340px;
 	margin-right:40px;
+	min-height:421px;
+	position:relative;
 	}
-.front-page-post button 
-{
-	margin-bottom:30px;	
+.front-page-post button {
+	position: absolute;
+	bottom: 0;	
 	}
 .front-page-post img 
 {
@@ -1195,7 +1216,9 @@ table th[class*="col-"] {
 
 /* gallery style
 ---------------------------------------------- */
-
+#content{
+	overflow:hidden;
+	}
 .gallery.clearfix{
 	display:table;
 	margin: 0 auto;
@@ -1204,7 +1227,7 @@ table th[class*="col-"] {
 	margin-left:20px;
 	}
 .gallery_detail_box{
-	width:47%;
+	width:45%;
 	}
 button.ver-galeria{
 	margin-top:30px;

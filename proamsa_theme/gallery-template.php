@@ -15,7 +15,7 @@ Template Name: Gallery Template
 			<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
 			<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) echo pdfprnt_show_buttons_for_custom_post_type( 'post_type=gallery&orderby=post_date' ); ?>
 			<div class="gallery_box entry-content">
-				<ul>
+				<ul class="gallery">
 				<?php 
 					global $post;
 					global $wpdb;
@@ -89,6 +89,7 @@ Template Name: Gallery Template
 					</li>
 				<?php endwhile; endif; wp_reset_query(); ?>
 				</ul>
+                <div class="page_navigation"></div>
 				<?php
 					if( $paged == 0 )
 							$paged = 1;
@@ -112,5 +113,7 @@ Template Name: Gallery Template
 						</div>
 					<?php } ?>
 		</div>
+       
 	</div>
+     
 <?php get_footer(); ?>

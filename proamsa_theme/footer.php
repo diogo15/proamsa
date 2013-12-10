@@ -38,9 +38,12 @@
            		<div class="clear"></div>
         </div>
          <div class="footer-legal">
-       		<p class="copy">&copy; 2013 Todos los derechos reservados, Proamsa<br/>
-Teléfonos: CRC +(506) 2283-0876  DOM +(809) 986095  info@grupoproamsa.com</p>
-            <p class="credit">Diseñado y Desarrollado por <a class="dame-click" href="http://dameclic.com"><img src="<?php echo IMG_DIR; ?>/dame-click-logo.png" alt=""/> DameClic</a></p>
+       		<p><?php echo get_box('todos-los-derechos-reservados'); ?></p>
+         </div>
+         <div class="desinged-by">
+            <p><?php echo get_box('disenado-por'); ?></p>
+          
+          <p>  <a class="dame-click" href="http://dameclic.com"><img src="<?php echo IMG_DIR; ?>/dame-click-logo.png" alt=""/> DameClic</a></p>
             <div class="clear"></div>
         </div>
     </div>
