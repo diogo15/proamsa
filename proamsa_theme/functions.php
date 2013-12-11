@@ -435,11 +435,13 @@ function proamsa_send_email( $post_id, $post ) {
 	$email = ( isset( $_POST['email-pass'] ) ? $_POST['email-pass'] : '' );
 	$pass = $post->post_password;
 	$permalink = get_permalink( $post_id ); 
+	$ajax_permalink = str_replace(site_url(), site_url().'/#', $permalink );
 
 	if ( $email && '' == $meta_value ){
 		$headers[] = 'From: Proamsa <info@proamsa.com>';
-		$sent = wp_mail( $email, "Acceso Proamsa", "Te han concedido acceso a esta pagina, \n{$permalink} \n utiliza la siguiente contraseña para acceder a ella: \n {$pass}", $headers );
-		
+		$sent = wp_mail( $email, "Acceso Proamsa", "Te han concedido acceso a esta pagina, \n{$ajax_permalink} \n 
+		utiliza la siguiente contraseña para acceder a ella: \n {$pass}", $headers );
+
 	}
 
 }
